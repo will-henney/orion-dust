@@ -1,0 +1,63 @@
+\begin{thebibliography}{8}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{}\fi
+\expandafter\ifx\csname urllinklabel\endcsname\relax
+  \def\urllinklabel{[LINK]}\fi
+\expandafter\ifx\csname adsurllinklabel\endcsname\relax
+  \def\adsurllinklabel{[ADS]}\fi
+
+\bibitem[{{Bally} {et~al.}(2006){Bally}, {Licht}, {Smith}, \&
+  {Walawender}}]{Bally:2006a}
+{Bally}, J., {Licht}, D., {Smith}, N., \& {Walawender}, J. 2006, \aj, 131, 473
+
+
+\bibitem[{{Follette} {et~al.}(2013){Follette}, {Close}, {Males}, {Kopon}, {Wu},
+  {Morzinski}, {Hinz}, {Rodigas}, {Puglisi}, {Esposito}, {Riccardi}, {Pinna},
+  {Xompero}, \& {Briguglio}}]{Follette:2013a}
+{Follette}, K.~B., {Close}, L.~M., {Males}, J.~R., {Kopon}, D., {Wu}, Y.-L.,
+  {Morzinski}, K.~M., {Hinz}, P., {Rodigas}, T.~J., {Puglisi}, A., {Esposito},
+  S., {Riccardi}, A., {Pinna}, E., {Xompero}, M., \& {Briguglio}, R. 2013,
+  ArXiv e-prints, http://arXiv.org/abs/1308.4147
+
+
+\bibitem[{{McCaughrean} \& {O'Dell}(1996)}]{McCaughrean:1996a}
+{McCaughrean}, M.~J. \& {O'Dell}, C.~R. 1996, \aj, 111, 1977
+
+
+\bibitem[{{Menten} {et~al.}(2007){Menten}, {Reid}, {Forbrich}, \&
+  {Brunthaler}}]{Menten:2007a}
+{Menten}, K.~M., {Reid}, M.~J., {Forbrich}, J., \& {Brunthaler}, A. 2007, \aap,
+  474, 515
+
+
+\bibitem[{{O'Dell}(2001)}]{ODell:2001c}
+{O'Dell}, C.~R. 2001, \aj, 122, 2662
+
+
+\bibitem[{{O'Dell} \& {Henney}(2008)}]{ODell:2008a}
+{O'Dell}, C.~R. \& {Henney}, W.~J. 2008, \aj, 136, 1566
+
+
+\bibitem[{{Ricci} {et~al.}(2008){Ricci}, {Robberto}, \&
+  {Soderblom}}]{Ricci:2008a}
+{Ricci}, L., {Robberto}, M., \& {Soderblom}, D.~R. 2008, \aj, 136, 2136
+
+
+\bibitem[{{Robberto} {et~al.}(2013){Robberto}, {Soderblom}, {Bergeron},
+  {Kozhurina-Platais}, {Makidon}, {McCullough}, {McMaster}, {Panagia}, {Reid},
+  {Levay}, {Frattare}, {Da Rio}, {Andersen}, {O'Dell}, {Stassun}, {Simon},
+  {Feigelson}, {Stauffer}, {Meyer}, {Reggiani}, {Krist}, {Manara},
+  {Romaniello}, {Hillenbrand}, {Ricci}, {Palla}, {Najita}, {Ananna},
+  {Scandariato}, \& {Smith}}]{Robberto:2013a}
+{Robberto}, M., {Soderblom}, D.~R., {Bergeron}, E., {Kozhurina-Platais}, V.,
+  {Makidon}, R.~B., {McCullough}, P.~R., {McMaster}, M., {Panagia}, N., {Reid},
+  I.~N., {Levay}, Z., {Frattare}, L., {Da Rio}, N., {Andersen}, M., {O'Dell},
+  C.~R., {Stassun}, K.~G., {Simon}, M., {Feigelson}, E.~D., {Stauffer}, J.~R.,
+  {Meyer}, M., {Reggiani}, M., {Krist}, J., {Manara}, C.~F., {Romaniello}, M.,
+  {Hillenbrand}, L.~A., {Ricci}, L., {Palla}, F., {Najita}, J.~R., {Ananna},
+  T.~T., {Scandariato}, G., \& {Smith}, K. 2013, ArXiv e-prints,
+  http://arXiv.org/abs/1304.4866
+
+
+\end{thebibliography}
