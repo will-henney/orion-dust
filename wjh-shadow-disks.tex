@@ -19,11 +19,13 @@
   }\\
   \protect\footnotesize\url{w.henney@crya.unam.mx}
   }
+\date{Draft version 1: 2013 August 26}
+
 \begin{document}
 \maketitle
 
 \begin{abstract}
-  I present an analysis of archival \textit{HST} images of  the Orion Nebula silhouette disk 218-354, obtained at multiple epochs and with two different cameras.   By comparing exposures taken with different telescope orientations, it is possible to correct for some instrumental artifacts in the images.   In agreement with previous \textit{HST} measurements, I find that the inner \(0.4''\) (180~AU) portion of the disk is optically thick at 6563~\AA{}, the wavelength of  the H\(\alpha\) line.   This result contradicts a recent claim, based on adaptive optics observations, that the disk is optically thin in H\(\alpha\).
+  I present an analysis of archival \textit{HST} images of  the Orion Nebula silhouette disk 218-354, obtained at multiple epochs and with two different cameras.   By comparing exposures taken with different telescope orientations, it is possible to correct for some instrumental artifacts in the images.   In agreement with previous \textit{HST} measurements, I find that the inner \(0.4''\) (180~AU) portion of the disk is optically thick at 6563~\AA{}, the wavelength of  the H\(\alpha\) line.   This result contradicts a recent claim, based on adaptive optics observations, that the disk is optically thin at H\(\alpha\).
   % \citet{Follette:2013a} present adaptive optics observations of the Orion Nebula silhouette disk 218-354, and claim that the disk is optically thin in H\(\alpha\).  I point out that existing \textit{Hubble Space Telescope} observations with two different cameras demonstrate that this claim is false.  The inner \(0.4''\) (180~AU) portion of the disk appears to be totally opaque at the wavelength of H\(\alpha\), although a translucent outer portion extends out to about \(0.7''\) (300~AU).
 
 % It's not a rebuttal -- it's a refutation. 
@@ -67,7 +69,7 @@ The major axis diameter of the disk is \(\simeq 1''\), which allows it to be wel
   \includegraphics[width=\linewidth]{profiles-acs-218-354}
   \caption{Surface brightness profiles of the images shown in Fig.~\ref{fig:hst-images}, taken along the disk major axis (upper panel) and minor axis (lower panel).  
     The three ACS exposures are shown as overlapping translucent gray histograms, while the WFPC2 exposure is shown by red lines.
-  The data are shown at two different brightness magnifications: the light gray histograms (\(\times 1.00\)) emphasize the disk absorption profile, while the dark gray histograms (\(\times 0.05\)) show the emission profile of the central star.  
+  The data are shown at two different brightness magnifications: the light gray histograms (\(\times 1.00\)) emphasize the disk absorption profile, while the dark gray histograms (\(\times 0.05\)) show the saturated emission profile of the central star.  
   The heavy gray lines show cubic polynomial fits to the nebular background emission. }
   \label{fig:hst-profiles}
 \end{figure}
@@ -89,21 +91,31 @@ Figure~\ref{fig:compare} shows the average and standard deviation of the three A
 
 It is apparent that there is a serious discrepancy between the \emph{HST} radial profiles and the reported MagAO profiles along the major axis.   Both sets of observations show that the outer extent of the disk extinction is at \(r \simeq 0.75''\), but the \emph{HST} profile swiftly falls to about 25\% of the background nebula brightness at \(r = 0.4''\), while the MagAO profile shows a very gradual decline with decreasing radius: at \(r = 0.4''\) it is still at \(> 70\%\) of the background brightness, and it only reaches the 25\% level very close to the star at \(r < 0.1''\).    The WFPC2 profiles are fully consistent with the ACS profiles, and are also very similar to the WFPC2 profile in the [O~III] \(\lambda 5007\) line shown in Fig.~3 of \citet{McCaughrean:1996a}. 
 
-The minor axis profiles (lower panel of Fig.~\ref{fig:compare}) show a much smaller discrepancy, which is of the same order as both the difference between the measured ACS and WFPC2 profiles and the difference between the upper and lower semi-minor axes.   Also, since the absorption is rather weak in the regions accesible to \textit{HST} measurements (\(r > 0.2''\)), the results are sensitive to the details of how the non-uniform nebular background is modelled. 
+The minor axis profiles (lower panel of Fig.~\ref{fig:compare}) show a much smaller discrepancy, which is of the same order as both the difference between the measured ACS and WFPC2 profiles and the difference between the upper and lower semi-minor axes.   Also, since the absorption is rather weak in the regions  where \textit{HST} measurements are reliable (\(r > 0.25''\)), the results are sensitive to the details of how the non-uniform nebular background is modelled. 
 
 % To simplify comparison, I adopt the same distance to M42 (414~pc; \citealp{Menten:2007a}) as used by \citeauthor{Follette:2013a}, although the most recent critical evaluation of this value \citep{ODell:2008a} recommends \(436 \pm 20\)~pc.   
 
 \section{Discussion}
 \label{sec:discuss}
 
-The ``sweet spot'' for the \textit{HST} observations along the projected major axis of the disk is the range of radii \(r = 0.4\)--\(0.6\) 
+The ``sweet spot'' for the \textit{HST} observations along the projected major axis of the disk lies in the range of radii \(r = 0.4\)--\(0.6''\).  In this range, the measured absorption is sufficiently strong (absorption depth of 20--70\%) that uncertainties in the nebular background level have a negligible effect.  On the other hand, it is sufficiently distant from the bright central star that stellar contamination of the emission should also be negligible, even accounting for artifacts induced by saturation of detector pixels.   It is in precisely this range that the discrepancy between the \textit{HST} and \hbox{MagAO} is greatest.  The absorption depth measured by \textit{HST} is consistently 2--3 times higher than that measured with MagAO over the entire range. 
 
-It should be noted that the \textit{HST} profiles have not been continuum-subtracted 
+
+\section*{TODO}
+\label{sec:todo}
+
+\begin{enumerate}
+\item Write Intro
+\item Add figure of major-axis profiles in \(B\), \(V\) and \(I\) continuum filters.  Disk absorption is detected in \(B\) and \(V\), but not in \(I\) since star is too bright there.  Evidence that center of stellar profile is offset from the geometric enter of the disk  (not surprising if reflection nebulosity contributes to ``stellar'' light). 
+\item Compare with giant disk 114-426 \citep{2003ApJ...587L.109S, Miotello:2012a}.  Colors of translucent outer portion, evidence for grain growth. 
+\item Filling in of the opaque portion due to the PSF.  Can PSF-redistribution of the stellar and nebular light explain all of the 30\% residual seen at \(r = 0.4''\).  Repeat calculation of Fig.~5 of \citeauthor{McCaughrean:1996a} but for an inclined disk and for the ACS PSF. 
+\item Maybe add theoretical section on diffuse transmission of background nebula light through disk?   Use the material from my ref report of Miotello paper.  Bottom line is that the extinction estimated from \(\tau = - \ln (I / I_\mathrm{neb}) \) is smaller than the true extinction if the grain albedo is high. 
+\end{enumerate}
 
 \section*{Acknowledgments}
 \label{sec:ack}
-I acknowledge financial support from DGAPA-UNAM, through grant PAPIIT IN102012.
-All of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST: \url{http://archive.stsci.edu}).  STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.   This work made use of the software package SAOimage ds9 (XXX) and the matplotlib plotting library for Python (XXX). 
+I gratefully acknowledge financial support from DGAPA-UNAM, through grant PAPIIT IN102012.
+All of the data presented in this paper were obtained from the Mikulski Archive for Space Telescopes (MAST: \url{http://archive.stsci.edu}).  STScI is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS5-26555.   This work has made use of the software package SAOimage ds9 (XXX) and the matplotlib plotting library for Python (XXX). 
 
 
 \bibliographystyle{astroads}

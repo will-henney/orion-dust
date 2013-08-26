@@ -25,18 +25,14 @@
 {McCaughrean}, M.~J. \& {O'Dell}, C.~R. 1996, \aj, 111, 1977
 
 
-\bibitem[{{Menten} {et~al.}(2007){Menten}, {Reid}, {Forbrich}, \&
-  {Brunthaler}}]{Menten:2007a}
-{Menten}, K.~M., {Reid}, M.~J., {Forbrich}, J., \& {Brunthaler}, A. 2007, \aap,
-  474, 515
+\bibitem[{{Miotello} {et~al.}(2012){Miotello}, {Robberto}, {Potenza}, \&
+  {Ricci}}]{Miotello:2012a}
+{Miotello}, A., {Robberto}, M., {Potenza}, M.~A.~C., \& {Ricci}, L. 2012, \apj,
+  757, 78
 
 
 \bibitem[{{O'Dell}(2001)}]{ODell:2001c}
 {O'Dell}, C.~R. 2001, \aj, 122, 2662
-
-
-\bibitem[{{O'Dell} \& {Henney}(2008)}]{ODell:2008a}
-{O'Dell}, C.~R. \& {Henney}, W.~J. 2008, \aj, 136, 1566
 
 
 \bibitem[{{Ricci} {et~al.}(2008){Ricci}, {Robberto}, \&
@@ -58,6 +54,12 @@
   {Hillenbrand}, L.~A., {Ricci}, L., {Palla}, F., {Najita}, J.~R., {Ananna},
   T.~T., {Scandariato}, G., \& {Smith}, K. 2013, ArXiv e-prints,
   http://arXiv.org/abs/1304.4866
+
+
+\bibitem[{{Shuping} {et~al.}(2003){Shuping}, {Bally}, {Morris}, \&
+  {Throop}}]{2003ApJ...587L.109S}
+{Shuping}, R.~Y., {Bally}, J., {Morris}, M., \& {Throop}, H. 2003, \apjl, 587,
+  L109
 
 
 \end{thebibliography}
