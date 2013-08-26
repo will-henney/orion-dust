@@ -148,12 +148,38 @@
   fig.tight_layout()
   plt.savefig(figfile)
   
+  figfile = "cprofiles-acs-218-354.pdf"
+  cfig = plt.figure(figsize=(8,5))
+  ymax = 2.4  
+  
+  camera = "acs"
+  for id_, x0, extra_scale, c, lab in [
+          ["major-R00L",       41.0, 1.0,  "k", "H alpha"], 
+          ["major-F435W-R00L", 41.0, 0.36, "b", "B continuum"], 
+          ["major-F555W-R00L", 41.0, 0.95, "g", "V continuum"], 
+          ["major-F775W-R00L", 41.0, 0.47, "r", "I continuum"], 
+  ]:
+      x, y = get_xydata(id_)
+      # plt.plot(x, y, label=id_, drawstyle="steps-mid")
+      plt.plot(x, y/extra_scale, c, alpha=0.7, label=lab)
+  
+  plt.xlim(-2.0, 2.0)
+  plt.ylim(0.0, ymax)
+  plt.grid(ls="-", alpha=0.3)
+  plt.ylabel("Surface brightness")
+  plt.xlabel("Offset, arcsec")
+  plt.legend(fontsize="small", title="Filter", loc="upper left")
+  fig.tight_layout()
+  plt.savefig(figfile)
+  
+  
+  
   figfile = "rprofiles-acs-218-354.pdf"
   rfig = plt.figure(figsize=(8,8))
   ymax = 1.4  
-
+  
   rfig.add_subplot(211)
-  plt.fill_betweenx([0.0, ymax], [0.32, 0.32], color="k", alpha=0.1) 
+  plt.fill_betweenx([0.0, ymax], [0.34, 0.34], color="k", alpha=0.1) 
   m = ymajor_std_grid < 0.5
   p3, _, _ = plt.errorbar(ao_data_radius, ao_data_major, ao_std_major, fmt='bo')
   p1, _, _ = plt.errorbar(rgrid[m], ymajor_mean_grid[m], ymajor_std_grid[m], fmt='ro')
@@ -172,7 +198,7 @@
   plt.ylabel("Mean brightness profile")
   
   rfig.add_subplot(212)
-  plt.fill_betweenx([0.0, ymax], [0.18, 0.18], color="k", alpha=0.1) 
+  plt.fill_betweenx([0.0, ymax], [0.28, 0.28], color="k", alpha=0.1) 
   m = yminor_std_grid < 10.0
   p3, = plt.plot(ao_data_radius, ao_data_minor, 'bo')
   p1, _, _ = plt.errorbar(rgrid[m], yminor_mean_grid[m], yminor_std_grid[m], fmt='ro')
