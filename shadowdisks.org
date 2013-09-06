@@ -1,6 +1,27 @@
 
 * No evidence for a translucent disk in the Orion Nebula
 + Disk 218-354
+** Comparison with giant silhouette
+
+*** Loophole in the Miotello paper
++ Nebular background has a gradient across the disk, but tey didn't take account of this
++ This casts doubt on their measurements for the translucent portions
+
+#+BEGIN_SRC python :results file
+  import numpy as np
+  import matplotlib.pyplot as plt
+  for pos in ["east", "center", "west"]:
+      x, y = np.loadtxt("114426-major-{}.dat".format(pos), unpack=True)
+      plt.plot(x, y, label=pos)
+  plt.ylim(0.0, None)
+  plt.legend()
+  plotfile = "114426-major-cuts.pdf"
+  plt.savefig(plotfile)
+  return plotfile
+#+END_SRC
+
+#+RESULTS:
+[[file:114426-major-cuts.pdf]]
 
 ** Plotting cut profiles
 
@@ -279,6 +300,131 @@ This star looks very similar
 + But it is binary
 This one might be better
 + 5:34:57.732 -5:23:52.72 - 577-352
+
+
+* Comparing shadow disks with shadow globules
+
++ Studies like Miotello claim to show increasingly large grains at higher optical depth
++ But there are questions about the effects of diffuse transmission through the disk
++ One way of addressing this would be with a comparitive study of
+  1. The translucent parts of the slhouette disks
+  2. Translucent foreground clouds and globules in the Veil
+     + The SW cloud
+     + The cloud to the E of LP Ori
+     + The Dark Bay
+     + Other small clouds
++ We have excellent wavelength coverage from U (3360 A) to I (8500 A) of all these regions with WFPC2 and ACS
++ Plus ground-based images from U to I with WFI, and JHK with ISPI
++ And finally NICMOS observations at 1.1 and 1.6 microns (JH), but this has very spotty coverage
+  + Visit 49 would have been great for SW cloud but it was lost from pointing error
+  + Visits 24, 25, 26 cover Dark Bay
+  + Visits 48, 47 cover some clouds to NW of LL Ori
+  + Visits 28, 29 cover some clouds in N of nebula
+** Plan of what to do 
++ Take all the ACS images of the SW cloud and calculate A_{\lambda} = -2.5 log(S_{\lambda}/S_{0}) where S_{0} is the interpolated BG value
++ Plot A_{B} vs A_{V} etc
++ Compare with predictions of different extinction laws
++ Look for non-linearity
++ Compensate for a constant FG value
++ Then do the same for the shadow disks
+
+** Fixing up the WCS in the C(Hb) map
+:LOGBOOK:
+CLOCK: [2013-09-05 Thu 10:00]--[2013-09-05 Thu 12:34] =>  2:34
+:END:
+
++ Peg th1C to the coordinates in the Robberto ACS images
+#+BEGIN_SRC python :results output
+import astropy.io.fits as pyfits
+f = pyfits.open("/Users/will/Work/BobPC/2005/chbeta-fix.fits")
+
+hdr = f[0].header
+
+# Convert to degrees
+for k in ["CD1_1", "CD1_2", "CD2_1", "CD2_2"]:
+    hdr[k] /= 3600.0
+    if k.endswith("1"):
+        hdr[k] *= -1.0
+# Put in coords of th1C
+hdr.update(ctype1="RA---TAN", ctype2="DEC--TAN", crpix1=389.4, crpix2=577.0, crval1=83.818547, crval2=-5.3897231)
+f.writeto("chbeta-radec.fits", clobber=True)
+
+#+END_SRC
+ 
+#+RESULTS:
+: WARNING: Overwriting existing file 'chbeta-radec.fits'. [astropy.io.fits.hdu.hdulist]
+
+** An east-west cut across the southwest cloud
+#+BEGIN_SRC python :results file
+import numpy as np
+import matplotlib.pyplot as plt
+pixscale = {"acs": 0.0500016812098, "wfpc2": 0.0455214603946}
+
+def get_xydata(camera, filter):
+    x, y = np.loadtxt("swcloud-{}-{}.dat".format(camera, filter), unpack=True)
+    return pixscale[camera]*x, y
+
+filters = ["V", "B", "Ha", "i", "z"]
+
+A = {}
+for filt in filters:
+    x, y = get_xydata("acs", filt)
+    mleft = (x > 60.0) & (x < 70.0)
+    mright = (x > 130.0)
+    m = mleft | mright
+    p = np.poly1d(np.polyfit(x[m], y[m], 2))
+    A[filt] = -2.5*np.log10(y/p(x))
+    msw = (x > 60.0) & (x < 150.0)
+    plt.plot(A["V"], A[filt]/A["V"], ".", alpha=0.2, label=filt)
+
+plt.ylim(-0.1, 1.1)
+plt.xlabel("A_V")
+plt.ylabel("A_lambda / A_V")
+plt.legend(loc="upper left")
+plt.grid(alpha=0.3)
+
+figname = "swcloud-cuts-acs.pdf"
+plt.savefig(figname)
+return figname
+#+END_SRC
+
+#+RESULTS:
+[[file:swcloud-cuts-acs.pdf]]
+
++ We graph A_{\lambda}/A_{V} as function of A_{V}
+  + a lot of noise at A_{V}  < 0.2, as you would expect due to uncertainties in the nebular bg (and fluctuations)
+  + more or less flat part extending from A_{V} = 0.5 to 1.5
+    + This is what we expect for constant dust properties and no scattering
+    + Some filters show multiple strands in range 0.5 to 1
+    + Average values around A_{V} = 1.2
+      | Filter |    \lambda |  1/\lambda | A_{\lambda}/A_{V} |
+      |--------+------+------+-------|
+      | B      | 4350 | 2.30 |  0.76 |
+      | V      | 5550 | 1.80 |   1.0 |
+      | H\alpha     | 6580 | 1.52 |   0.9 |
+      | i      | 7750 | 1.29 |   0.7 |
+      | z      | 8500 | 1.18 |  0.63 |
+      #+TBLFM: $3=10000/$2 ; f2
+    + This extinction curve is very similar to what Miotello find for their pixel A, which is one where they say the grains are 0.6 microns
+    + Except that our peak in the V-band is a bit narrower
+
+
++ tendency to go up from A_{V} = 1.5 to 2
+* Reflection nebulae in M42
+There are several areas of reflection nebulosity:
++ Cavity around LP Ori
++ Bright Blue Star to the SW
+  + This looks great - more or less circular, but with wisps
+  + Reminiscent of the Pleiades
++ The Bright Bar, in particular the SW end
++ The gray wisps:
+  + The ones between the Trapezium and LL2
+  + The ones to SE of L Ori
+  + The ones in the far S
++ The steely blue-gray shell
+  + The rippling wing to the SE
+  + The NW wing
++ The gray globules to the far W
 * COMMENT Export options
 #+TITLE: Shadow Disks
 #+AUTHOR: William Henney
@@ -293,3 +439,13 @@ This one might be better
 #+KEYWORDS:
 #+LANGUAGE: en
 #+SELECT_TAGS: export
+
+
+
+
+
+
+
+
+
+
