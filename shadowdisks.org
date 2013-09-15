@@ -1,3 +1,4 @@
+Not just for diks anymore.  Anything to do with dust scattering and extinction in Orion. 
 
 * No evidence for a translucent disk in the Orion Nebula
 + Disk 218-354
@@ -397,13 +398,13 @@ return figname
     + This is what we expect for constant dust properties and no scattering
     + Some filters show multiple strands in range 0.5 to 1
     + Average values around A_{V} = 1.2
-      | Filter |    \lambda |  1/\lambda | A_{\lambda}/A_{V} |
-      |--------+------+------+-------|
-      | B      | 4350 | 2.30 |  0.76 |
-      | V      | 5550 | 1.80 |   1.0 |
-      | H\alpha     | 6580 | 1.52 |   0.9 |
-      | i      | 7750 | 1.29 |   0.7 |
-      | z      | 8500 | 1.18 |  0.63 |
+      | Filter  | \lambda | 1/\lambda | A_{\lambda}/A_{V} |
+      |---------+---------+-----------+-------------|
+      | B       |    4350 |      2.30 |        0.76 |
+      | V       |    5550 |      1.80 |         1.0 |
+      | H\alpha |    6580 |      1.52 |         0.9 |
+      | i       |    7750 |      1.29 |         0.7 |
+      | z       |    8500 |      1.18 |        0.63 |
       #+TBLFM: $3=10000/$2 ; f2
     + This extinction curve is very similar to what Miotello find for their pixel A, which is one where they say the grains are 0.6 microns
     + Except that our peak in the V-band is a bit narrower
@@ -425,6 +426,198 @@ There are several areas of reflection nebulosity:
   + The rippling wing to the SE
   + The NW wing
 + The gray globules to the far W
+* The dark tadpole 4572-337
+:LOGBOOK:
+CLOCK: [2013-09-13 Fri 10:23]
+:END:
+[[file:DarkTadpole/][file:~/Dropbox/ShadowDisks/DarkTadpole/]]
++ Looks like a giant proplyd
++ But seen in absorption
++ And with a shocked shell too
++ Position is =5:34:57.199 -5:23:37.49=
+  + According to Robberto images
+  + So OW name should be 4572-337
+
+
+** Limits on possible emission
++ Looking at cuts across the head, it is possible that there is some Ha emission, but it must be at a very low level.
+  + Less than 0.05 in the Bally images
+  + BG is 2.7 ish
+** Depth of absorption
++ BG level (samples near head): 2.74 +/- 0.03, 2.73 +/- 0.03
+  + vmeane([2.74 +/- 0.03, 2.73 +/- 0.03]) = 2.735 +/- 0.02
++ Core: 2.35
++ Head: 2.52 +/- 0.03
++ Tail filaments:
+  + I: 2.64 +/ 0.02
+    + BG = vmeane([2.74 +/- 0.03, 2.80 +/- 0.02]) = 2.78 +/- 0.02
+  + II: 2.84 +/- 0.03
+    + BG = vmeane([2.99 +/- 0.01, 2.92 +/- 0.02]) = 2.98 +/- 0.01
++ Shell: BG measured inside and out
+  + I (on axis): 2.69 +/- 0.02,
+    + BG =  vmeane([2.75 +/- 0.02, 2.72 +/- 0.01]) = 2.726 +/- 0.01
+  + II (to W): 2.69 +/- 0.01,
+    + BG = vmeane([2.71 +/- 0.02, 2.72 +/- 0.02]) = 2.715 +/- 0.01
+  + III (further to W): 2.64 +/- 0.02,
+    + BG = vmeane([2.68 +/- 0.02, 2.67 +/- 0.02]) = 2.675 +/- 0.01
+  + IV (to E): 2.74 +/- 0.02,
+    + BG = vmeane([2.77 +/- 0.02, 2.76 +/- 0.02]) = 2.765 +/- 0.01
+
+** Calculating the extinction
+
++ We can calculate a lower limit on the extinction by assuming that all the BG emission comes from behind the tadpole, so that A_{\lambda} = -2.5 log_{10} (B/BG)
+  + This gives a value of A_{H\alpha }= 0.165 for the core, 0.09 for the head and 0.01 for the shell
++ Alternatively, we can find an upper limit by assuming that the core extinction is actually large (say 3), implying that 2.33/2.735 = 85% of the BG emission must come from in front of the tadpole.
+  + This gives A_{H\alpha }= \infty for the core, 0.9 for the head, and 0.1 for the shell
+| Region    | Bright        | mean BG        | -2.5 log(B/BG)  | -2.5 log(B'/BG') |
+|-----------+---------------+----------------+-----------------+------------------|
+| Core      | 2.35          | 2.735 +/- 0.02 | 0.165 +/- 0.008 | 3.266 +/- 0.054  |
+| Head      | 2.52 +/- 0.03 | 2.735 +/- 0.02 | 0.089 +/- 0.015 | 0.822 +/- 0.180  |
+| Tail I    | 2.64 +/- 0.02 | 2.78 +/- 0.02  | 0.056 +/- 0.011 | 0.405 +/- 0.085  |
+| Tail II   | 2.84 +/- 0.03 | 2.98 +/- 0.01  | 0.052 +/- 0.012 | 0.263 +/- 0.066  |
+| Shell I   | 2.69 +/- 0.02 | 2.726 +/- 0.01 | 0.014 +/- 0.009 | 0.103 +/- 0.066  |
+| Shell II  | 2.69 +/- 0.01 | 2.715 +/- 0.01 | 0.010 +/- 0.006 | 0.073 +/- 0.041  |
+| Shell III | 2.64 +/- 0.02 | 2.675 +/- 0.01 | 0.014 +/- 0.009 | 0.116 +/- 0.077  |
+| Shell IV  | 2.74 +/- 0.02 | 2.765 +/- 0.01 | 0.010 +/- 0.009 | 0.064 +/- 0.059  |
+#+TBLFM: $4=-2.5 log10($2/$3); f3::$5=-2.5 log10(($2 - 2.33)/($3 - 2.33)); f3
+
+
+** Sizes
++ Head radius:
+  + axis: 1.7 arcsec
+  + side (east): 1.9 arcsec
+  + side (west): 1.7 arcsec
++ Head thickness
+  + 0.36 arcsec
++ Core size (diameter):
+  + major axis (PA 50): 0.25 arcsec
+  + minor axis: 0.12 arcsec
++ Shell radius:
+  + axis: 6.9 arcsec
+  + side (east): 5.3 arcsec
+  + side (west): 5.9 arcsec
++ Shell thickness:
+  + axis: 0.5 arcsec
+  + side (west): 0.8 arcsec
+  + side (east): 0.7 arcsec
+
+** Density estimates
+All assume D = 440 pc, sigma = 5e-22 cm^{2}/H
+
+*** Core
++ Path length ~= 0.2 440 au = 1.312e15 cm
++ Minimum column
+  + A = 0.165
+  + N = 3.3e20 cm^{-2}
+  + n = 2.5e5  cm^{-3}
++ Mass
+  + assume area = pi (0.1 440 au)**2 = 1.36e30 cm^{2}
+  + M = 1.36e30 3.3e20 mp /msun = 3.77e-7 M_{\odot}
++ Escape velocity
+  + V = sqrt(2 G M / R) = 0.004 km/s
+*** Head 
++ Path length ~= 2 (R h)  = 1.6 440 au = 1.05e16 cm
++ Minimum column
+  + A = 0.09
+  + N = 1.8e20 cm^{-2}
+  + n = 17,000 cm^{-3}
++ Maximum column
+  + A = 0.888
+  + N = 1.776e21
+  + n = 170,000 cm^{-3}
++ Mass 
+  + assume area = pi (1.7 440 au)**2 = 3.93e32 cm^{2}
+  + M = 3.93e32 1.8e20 mp / msun = 5.95e-5 M_{\odot}
++ Escape velocity
+  + V = sqrt(2 G M / R) = 0.017 km/s
+  + So certainly not self-gravitating
+*** Shell
++ Path length ~= 2 (R h)^{1/2} = 3.7 440 au =2.435e16 cm
++ Minimum column
+  + A = 0.012
+  + N = 2.4e19 cm^{-2}
+  + n = 1000 cm^{-3}
++ Maximum column
+  + A = 0.1
+  + N = 2e20 cm^{-2}
+  + n = 8000 cm^{-3}
+
+** Required ionizing flux if it is an ionized flow from head
+
+*** Ionized density at head
++ Ionized density should be 1/40 of neutral density, assuming T = 1000 K and D-critical
+  + Implies n = 425 cm^{-3}
+  + Although this could be modified if magnetic support were important on the neutral side
++ On the other hand, shell is inconsistent with this:
+  + Shell radius is 4 times head radius => geometric dilution of 16
+  + Assume M = 3, means that shell density should be 16/3 = 5.3 times smaller than i-front density
+  + Implying n = 5300 at ionization front
+  + This could work if shock was still going into head
+    + There would be a 2e5 cm^{-3} layer behind i-front, but if it were thin enough it wouldn't show up
+
+*** Recombination limit
++ F = \alpha n^{2} h
++ \alpha = 2.6e-13 cm^{3}/s
++ n = 5300 cm^{-3}
++ h = 0.1 R = 75 AU = 1.12e15 cm
++ => F = 8.18e9 cm^{-2}
+*** Advection limit
++ F = u n
++ u = c = 10 km/s
++ => F = 5.3e9 cm^{-2}
+
+** Required FUV flux if it is a neutral flow from head
++ The idea is that the head and core will be molecular with T = 30-50 K
++ Then the gas is dissociated, lowering its density and flowing out in a neutral photoevaporation flow with T ~ 300 K
+  + This will have lower density, but the jump may be signifcantly less than 40 since the molecular gas is likely to be magnetically dominated
+  + Assuming Alfven speed of V_{A} \approx 1 km/s
+*** Neutral density at the head
++ Sound speed: c = sqrt(k T / m) = 1.4 km/s T_{300}^{1/2} for neutral gas (m = 1.3 mp)
+  + For molecular gas @ 30 K: c = 0.3 km/s
++ D-type transonic dissociation front will have P_{m} = 2 P_{n}
++ Assume P_{m} is dominated by magnetic pressure:  P_{m} = 0.5 \rho_{m} V_{A}^{2} = 2 \rho_{n} c_{n}^{2}
+  + =>  \rho_{n} / \rho_{m} =  0.25 (V_{A} / c_{n})^{2} = 0.128 V_{1}^{2} / T_{300}
+  + where V_{1} is molecular Alfven speed in units of 1 km/s
++ Since we have n_{m} = 1.7e4 pcc (this is H nucleon density) this implies:
+  + n_{n} = 2200 V_{1}^{2} / T_{300} pcc
++ This is more or less consistent with the shell density of 1000 pcc
+  + which implies n_{n} = (1000 16) / M_{sh} = 5300 M_{3}^{-1} pcc
+  + [ ] so long as neutral flow is isothermal (need to check heating timescale)
++ So it would work with V_{A,m} = 1.7 km/s and T_{n} = 300 K or similar combination
+  + Implies \beta_{m} = 2 c^{2} / V_{A}^{2} = 0.06
+  + [ ] Would this cause anisotropic compression?
+  + In neutral gas, B would be smaller or equal to strength in molecular gas
+    + equal in the case of B perp to front
+    + so neutral V_{A} goes down by sqrt of density jump => V_{A} < 0.95 km/s
+    + => \beta_{n} > 4.3, so neutral gas is thermally dominated but not by much
+*** Advection limit for dissociation
++ F = 0.5 u n / f_{d}
++ u = c = 1.4  T_{300}^{1/2} km/s
++ n = 5300 pcc
++ f_{d} \approx 0.1 (dissociation fraction for Solomon process)
++ => F = 3.71e9 phot/cm^{2}
++ Habing Flux is 1.213e7
++ So G/G_{0} \approx 300
++ And G/n = 0.02 - is this big or small?
+  + Seems to be small - see next item
++ Main IF in Orion has
+  + G = 2.5e13 => G/G_{0} = 2e6
+  + n < 1e6 certainly, so G/n \sim 1
+
+*** And what if the shell corresponded to an ionization front?
+** Illuminating star?
+These are the only ones in the right direction:
+| Star     | RA           | Dec          | Sp T | D (arcsec) |
+|----------+--------------+--------------+------+------------|
+| HD 36939 | 5:34:55.265  | -5:30:23.40  | B9V  |        430 |
+| HD 36917 | 05 34 46.984 | -05 34 14.59 | A0V  |        680 |
++ They do not seem promising at all.
++ At least, not for ionizing photons
+  + Required flux is about 1e10 cm^{-2}
+  + So at D = 430 arcsec = 2.83e18 cm, we need QH = 4 pi D**2 F = 1e48 phot/s
+  + This is equivalent to a B0 star, not a B9 star
+
+
 * COMMENT Export options
 #+TITLE: Shadow Disks
 #+AUTHOR: William Henney
