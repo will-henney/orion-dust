@@ -607,15 +607,32 @@ All assume D = 440 pc, sigma = 5e-22 cm^{2}/H
 *** And what if the shell corresponded to an ionization front?
 ** Illuminating star?
 These are the only ones in the right direction:
-| Star     | RA           | Dec          | Sp T | D (arcsec) |
-|----------+--------------+--------------+------+------------|
-| HD 36939 | 5:34:55.265  | -5:30:23.40  | B9V  |        430 |
-| HD 36917 | 05 34 46.984 | -05 34 14.59 | A0V  |        680 |
-+ They do not seem promising at all.
-+ At least, not for ionizing photons
-  + Required flux is about 1e10 cm^{-2}
-  + So at D = 430 arcsec = 2.83e18 cm, we need QH = 4 pi D**2 F = 1e48 phot/s
-  + This is equivalent to a B0 star, not a B9 star
+| Star        | RA                | Dec               | Sp T  | D (arcsec) |     \Delta\alpha |      \Delta\delta |      D |   PA |
+|-------------+-------------------+-------------------+-------+------------+--------+---------+--------+------|
+| Globule     | 5@ 34' 57.199"    | -5@ 23' 37.49"    |       |            |    0.0 |     0.0 |    0.0 |  0e0 |
+|-------------+-------------------+-------------------+-------+------------+--------+---------+--------+------|
+| HD 36939    | 5@ 34' 55.265"    | -5@ 30' 23.40"    | B9V   |        430 |  -28.9 |  -405.9 |  406.9 | 184. |
+| HD 36917    | 05@ 34' 46.984"   | -05@ 34' 14.59"   | A0V   |        680 | -152.5 |  -637.1 |  655.1 | 193. |
+| iota Ori    | 05@ 35' 25.982"   | -05@ 54' 35.64"   | O9III |            |  429.8 | -1858.2 | 1907.3 | 167. |
+| ADS 4182 AB | 05@ 35' 02.68"    | -06@ 00' 07.2"    | B0    |            |   81.9 | -2189.7 | 2191.2 | 178. |
+| HR 1887     | 05@ 35' 02.68074" | -06@ 00' 07.3036" | B0.5V |            |   81.9 | -2189.8 | 2191.3 | 178. |
+| HR 1886     | 05@ 35' 01.00645" | -06@ 00' 33.3828" | B1v   |            |   56.9 | -2215.9 | 2216.6 | 179. |
+#+TBLFM: $6=3600 * 15  * 0.995572228862 * deg($2 - @I$2) ;f1::$7=3600 deg($3 - @I$3);f1::$8=sqrt($6**2 + $7**2);f1::$9=arctan2($6, $7) % 360;f0
+
++ The first two do not seem promising at all.
+  + At least, not for ionizing photons
+    + Required flux is about 1e10 cm^{-2}
+    + So at D = 430 arcsec = 2.83e18 cm, we need QH = 4 pi D**2 F = 1e48 phot/s
+    + This is equivalent to a B0 star, not a B9 star
++ Iota Orionis looks more promising, except for the direction
+  + There are some B0 stars as well
+  + For ionizing photons, it is still too faint
+    + D = 2000 arcsec = 1.32e19 cm (4.27 pc)
+    + => required ionizing luminosity: 2.2e49 phot/s
+    + I think this is more than a O9III star could provide
+  + For FUV photons, required flux is 3.71e9
+    + => FUV photon luminosity of 8e48
+    + Could be larger if real distance is larger than projected distance. 
 
 
 * COMMENT Export options
