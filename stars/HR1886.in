@@ -1,0 +1,7 @@
+title Spectrum of Orion star HR1886 using Tlusty
+table star tlusty OBstar 3-dim 25400 g=3.62 z=-0.1
+luminosity total solar 4.57 
+hden 4
+radius 17
+stop zone 1
+save continuum file="HR1886.cont"

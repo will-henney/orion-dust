@@ -1,0 +1,7 @@
+title Spectrum of Orion star th1B using Tlusty
+table star tlusty OBstar 3-dim 18000 g=4.10 z=-0.1
+luminosity total solar 3.25 
+hden 4
+radius 17
+stop zone 1
+save continuum file="th1B.cont"

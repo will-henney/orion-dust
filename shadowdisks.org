@@ -1,4 +1,4 @@
-Not just for diks anymore.  Anything to do with dust scattering and extinction in Orion. 
+Not just for disks anymore.  Anything to do with dust scattering and extinction in Orion. 
 
 * No evidence for a translucent disk in the Orion Nebula
 + Disk 218-354
@@ -430,13 +430,14 @@ There are several areas of reflection nebulosity:
 :LOGBOOK:
 CLOCK: [2013-09-13 Fri 10:23]
 :END:
-[[file:DarkTadpole/][file:~/Dropbox/ShadowDisks/DarkTadpole/]]
+[[file:DarkTadpole/]]
 + Looks like a giant proplyd
 + But seen in absorption
 + And with a shocked shell too
 + Position is =5:34:57.199 -5:23:37.49=
   + According to Robberto images
   + So OW name should be 4572-337
++ [2013-09-16 Mon] New name: Ghost Globule
 
 
 ** Limits on possible emission
@@ -527,7 +528,7 @@ All assume D = 440 pc, sigma = 5e-22 cm^{2}/H
   + n = 170,000 cm^{-3}
 + Mass 
   + assume area = pi (1.7 440 au)**2 = 3.93e32 cm^{2}
-  + M = 3.93e32 1.8e20 mp / msun = 5.95e-5 M_{\odot}
+  + M = 3.93e32 1.8e20 mp / msun = 5.95e-5 M_{\odot} = 20 M_{\oplus}
 + Escape velocity
   + V = sqrt(2 G M / R) = 0.017 km/s
   + So certainly not self-gravitating
@@ -603,21 +604,50 @@ All assume D = 440 pc, sigma = 5e-22 cm^{2}/H
 + Main IF in Orion has
   + G = 2.5e13 => G/G_{0} = 2e6
   + n < 1e6 certainly, so G/n \sim 1
+**** And what would column of neutral flow be?
++ Column \approx n_{0} r_{0}
+  + Is this still true for accelerated flows?
++ With n_{0} = 5300 pcc and r_{0} = 1.12e16 cm
++ => N = 5.936e19 cm, or A_{V} = 0.03
++ [ ] Is it feasible to have the heating/dissociation front at such a low column?
 
 *** And what if the shell corresponded to an ionization front?
++ Or more exactly, the neutral shell behind the i-front
++ Neutral density in shell: n = 1000 pcc
++ Again assume D-critical transition
+  + P_{n} = 2 P_{i} where this time they are both thermally dominated
+    + P_{n} = \rho_{n} c_{n}^{2} and  P_{i} = \rho_{i} c_{i}^{2} with c_{n} \approx 1.4 km/s, c_{i} \approx 10 km/s
+    + => n_{i} = 0.01 n_{n} = 10 pcc - that is very low!
+  + That would mean an advective flux of  c_{i} n_{i} = 1e7 /cm^{2}/s
+  + Recombination flux of 0.1 R \alpha n^{2}
+    + R = 7 arcsec = 4.6e16 cm
+    + => F = 1.2e5 /cm^{2}/s
+    + which is completely negligible
+  + This implies a low luminosity for the ionizing star
+    + With no attenuation @1.32e19 cm: QH = 2.2e46
+
+*** How can the shell-as-i-front scenario be salvaged?
+
+**** Smaller density jump across the i-front
++ This would require either:
+  1) magnetic support in the neutral shell, or
+  2) higher T in the neutral shell
+**** Large attenuation of ionizing radiation by recombinations in HII region
++ Ratio of 
+
 ** Illuminating star?
 These are the only ones in the right direction:
-| Star        | RA                | Dec               | Sp T  | D (arcsec) |     \Delta\alpha |      \Delta\delta |      D |   PA |
-|-------------+-------------------+-------------------+-------+------------+--------+---------+--------+------|
-| Globule     | 5@ 34' 57.199"    | -5@ 23' 37.49"    |       |            |    0.0 |     0.0 |    0.0 |  0e0 |
-|-------------+-------------------+-------------------+-------+------------+--------+---------+--------+------|
-| HD 36939    | 5@ 34' 55.265"    | -5@ 30' 23.40"    | B9V   |        430 |  -28.9 |  -405.9 |  406.9 | 184. |
-| HD 36917    | 05@ 34' 46.984"   | -05@ 34' 14.59"   | A0V   |        680 | -152.5 |  -637.1 |  655.1 | 193. |
-| iota Ori    | 05@ 35' 25.982"   | -05@ 54' 35.64"   | O9III |            |  429.8 | -1858.2 | 1907.3 | 167. |
-| ADS 4182 AB | 05@ 35' 02.68"    | -06@ 00' 07.2"    | B0    |            |   81.9 | -2189.7 | 2191.2 | 178. |
-| HR 1887     | 05@ 35' 02.68074" | -06@ 00' 07.3036" | B0.5V |            |   81.9 | -2189.8 | 2191.3 | 178. |
-| HR 1886     | 05@ 35' 01.00645" | -06@ 00' 33.3828" | B1v   |            |   56.9 | -2215.9 | 2216.6 | 179. |
-#+TBLFM: $6=3600 * 15  * 0.995572228862 * deg($2 - @I$2) ;f1::$7=3600 deg($3 - @I$3);f1::$8=sqrt($6**2 + $7**2);f1::$9=arctan2($6, $7) % 360;f0
+| Star        |   HIP | RA                | Dec               | Sp T  | \Delta\alpha | \Delta\delta |      D |   PA |
+|-------------+-------+-------------------+-------------------+-------+--------------+--------------+--------+------|
+| Globule     |       | 5@ 34' 57.199"    | -5@ 23' 37.49"    |       |          0.0 |          0.0 |    0.0 |  0e0 |
+|-------------+-------+-------------------+-------------------+-------+--------------+--------------+--------+------|
+| HD 36939    |       | 5@ 34' 55.265"    | -5@ 30' 23.40"    | B9V   |        -28.9 |       -405.9 |  406.9 | 184. |
+| HD 36917    |       | 05@ 34' 46.984"   | -05@ 34' 14.59"   | A0V   |       -152.5 |       -637.1 |  655.1 | 193. |
+| iota Ori    | 26241 | 05@ 35' 25.982"   | -05@ 54' 35.64"   | O9III |        429.8 |      -1858.2 | 1907.3 | 167. |
+| ADS 4182 AB |       | 05@ 35' 02.68"    | -06@ 00' 07.2"    | B0    |         81.9 |      -2189.7 | 2191.2 | 178. |
+| HR 1887     | 26199 | 05@ 35' 02.68074" | -06@ 00' 07.3036" | B0.5V |         81.9 |      -2189.8 | 2191.3 | 178. |
+| HR 1886     | 26197 | 05@ 35' 01.00645" | -06@ 00' 33.3828" | B1v   |         56.9 |      -2215.9 | 2216.6 | 179. |
+#+TBLFM: $6=3600 * 15  * 0.995572228862 * deg($3 - @I$3) ;f1::$7=3600 deg($4 - @I$4);f1::$8=sqrt($6**2 + $7**2);f1::$9=arctan2($6, $7) % 360;f0
 
 + The first two do not seem promising at all.
   + At least, not for ionizing photons
@@ -632,9 +662,207 @@ These are the only ones in the right direction:
     + I think this is more than a O9III star could provide
   + For FUV photons, required flux is 3.71e9
     + => FUV photon luminosity of 8e48
-    + Could be larger if real distance is larger than projected distance. 
+    + Could be larger if real distance is larger than projected distance.
+*** Table of stellar parameters
++ From Hohle et al (2010) 2010AN....331..349H
++ Surface gravity is calculated as g = G M / R^{2} = G M 4 \pi \sigma T^{4} / L
++ Luminosity and mass for \iota Ori B are my guesses
+| name        |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}      | log g         |
+|-------------+-------+--------+-------+---------------+-----------------+---------------|
+| \iota Ori   | 26241 | O9 III | 32000 |        5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
+| \iota Ori B |       | B1V    | 24000 |         37000 | 15              | 3.52          |
+| HR 1886     | 26197 | B1 V   | 25400 |         37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
+| HR 1887     | 26199 | B0.5 V | 27700 |         37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
+#+TBLFM: $7=log10($Grav $6 $Msun 4 $pi $sigma $4**4 / $5 $Lsun) ; f2
 
 
+*** Cloudy models of the stellar spectra
+:PROPERTIES:
+:dir:      stars
+:tangle:   stars/generate-orion-seds.py
+:END:
+
+This is based on what I did for the [[id:7E209EE8-5EB0-49B8-82F1-99EBE7DC3446][Orion {N I} project]]
+
+#+begin_src python
+"""
+Generate Cloudy input files for some OB stars in Orion
+"""
+#+end_src
+
+
+
+**** Trapezium stars
+#+begin_src python
+stars = dict(
+    th1C = dict(T=39000., g=4.1, L=5.31),
+    th1A = dict(T=30000., g=4.0, L=4.45),
+    th1D = dict(T=32000., g=4.2, L=4.47),
+    th1B = dict(T=18000., g=4.1, L=3.25),
+    th1C2 = dict(T=25000., g=3.86, L=4.2),
+    )
+#+end_src
+
+**** NGC 1980 stars
+#+begin_src python
+stars.update(
+    iota = dict(T=32000., g=3.21, L=5.72),
+    iotaB = dict(T=24000., g=3.52, L=4.57),
+    HR1886 = dict(T=25400., g=3.62, L=4.57),
+    HR1887 = dict(T=27700., g=3.78, L=4.58),
+)
+#+end_src
+
+**** Generate the cloudy input scripts
+#+begin_src python
+template = """\
+title Spectrum of Orion star %(id)s using Tlusty
+table star tlusty OBstar 3-dim %(T)i g=%(g).2f z=-0.1
+luminosity total solar %(L).2f 
+hden 4
+radius 17
+stop zone 1
+save continuum file="%(id)s.cont"
+"""
+
+for star in stars:
+    stars[star].update(id=star)
+    with open(star + ".in", "w") as f:
+        f.write(template % stars[star])
+
+
+#+end_src
+
+
+*** Download and compile the Tlusty atmosphere models
+:PROPERTIES:
+:dir:      ~/Work/CLOUDY/git-svn/data
+:END:
+
+
+**** Download models
+Download http://nova.astro.umd.edu/Tlusty2002/database/obstar_merged_3d.ascii.gz (Note that it is big - 86MB)
+**** Unpack models
+#+BEGIN_SRC sh
+mv ~/Downloads/obstar_merged_3d.ascii .
+#+END_SRC
+
+#+RESULTS:
+
+**** Compile models
+#+BEGIN_SRC sh :results verbatim
+echo "compile stars" | ../source/cloudy.exe 
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+                                                         Cloudy 13.01.01
+                                                         www.nublado.org
+
+                       **************************************13Jan01**************************************
+                       *                                                                                 *
+                       * compile stars                                                                   *
+ AtlasCompile on the job.
+ CoStarCompile on the job.
+ Kurucz79Compile on the job.
+ MihalasCompile on the job.
+ RauchCompile on the job.
+ StarburstCompile on the job.
+ TlustyCompile on the job.
+ WernerCompile on the job.
+ WMBASICCompile on the job.
+
+ 1 ascii file(s) found, 1 file(s) up to date.
+
+ The compilation was successful!
+ The portable ascii files are no longer needed and may be deleted to save space.
+
+ Good Luck!!
+
+
+ [Stop in ParseCompile at parse_compile.cpp:507, Cloudy exited OK]
+#+end_example
+
+**** Check models are there
+#+BEGIN_SRC sh :results output 
+echo "table star available" | ../source/cloudy.exe 
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+                                                         Cloudy 13.01.01
+                                                         www.nublado.org
+
+                       **************************************13Jan01**************************************
+                       *                                                                                 *
+                       * table star available                                                            *
+
+ I will now list all stellar atmosphere grids that are ready to be used (if any).
+ User-defined stellar atmosphere grids will not be included in this list.
+
+   table star tlusty OBstar 3-dim <Teff> <log(g)> <log(Z)>
+ [Stop in ParseTable at parse_table.cpp:1273, Cloudy exited OK]
+#+end_example
+
+*** Makefile to run the cloudy jobs
+	:PROPERTIES:
+        :tangle:   stars/Makefile
+	:END:
+#+begin_src makefile
+CLOUDY=cloudy.exe
+SRC = $(wildcard *.in)
+OBJ = $(SRC:.in=.out)
+
+all: $(OBJ)
+
+%.out: %.in
+	$(CLOUDY) < $< > $@ 
+#+end_src
+
+*** Regenerate input files and run make
+:PROPERTIES:
+:dir:      stars
+:END:
+
+#+begin_src sh :results output
+python ./generate-orion-seds.py
+export PATH=$PATH:~/Work/CLOUDY/git-svn/source
+make -j 6 
+#+end_src
+
+#+RESULTS:
+: cloudy.exe < HR1886.in > HR1886.out
+: cloudy.exe < HR1887.in > HR1887.out
+: cloudy.exe < iota.in > iota.out
+: cloudy.exe < iotaB.in > iotaB.out
+: cloudy.exe < th1A.in > th1A.out
+: cloudy.exe < th1B.in > th1B.out
+: cloudy.exe < th1C.in > th1C.out
+: cloudy.exe < th1C2.in > th1C2.out
+: cloudy.exe < th1D.in > th1D.out
+
+
+*** Original copy of Iota Ori parameters
++ HIP	 26241	 	Hipparcos identification number
++ Magnitudes
+  + B = 2.53
+  + V = 2.77
+  + J = 3.490 +/- 0.304
+  + H = 3.648 +/- 0.252
+  + K = 3.752 +/- 0.252
++ plx = 1.40 +/- 0.22 mas => D = 714.285714286 +/- 112.244897959 pc
++ SpType	O9 III
++ Teff	 32000	K
++ M = 32.74 +/- 13.89 M_{\odot}
++ L = 5.29e5 L_{\odot}
++ Secondary:
+  + B1V
+  + Teff 24000 K
+  + L unknown - but will be 30% of primary if they have the same radius
+
+
+** Vizier acknowledgments
+This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in A&AS 143, 23
 * COMMENT Export options
 #+TITLE: Shadow Disks
 #+AUTHOR: William Henney
@@ -650,7 +878,9 @@ These are the only ones in the right direction:
 #+LANGUAGE: en
 #+SELECT_TAGS: export
 
-
+# Local Variables:
+# org-src-preserve-indentation: t
+# End:
 
 
 
