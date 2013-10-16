@@ -12,8 +12,8 @@ stars = dict(
     )
 
 stars.update(
-    iota = dict(T=32000., g=3.76, L=5.25),
-    iotaB = dict(T=21000., g=3.87, L=4.09),
+    iota = dict(T=32000., g=3.21, L=5.72),
+    iotaB = dict(T=24000., g=3.52, L=4.57),
     HR1886 = dict(T=25400., g=3.62, L=4.57),
     HR1887 = dict(T=27700., g=3.78, L=4.58),
 )

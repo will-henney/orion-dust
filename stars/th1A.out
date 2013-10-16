@@ -683,7 +683,7 @@ Warning: duplicate reaction H-,Li+=>H,Li -- using new version
    <a>:8.17E-05  erdeFe0.0E+00  Tcompt1.84E+06  Tthr8.75E+07  <Tden>: 5.19E+03  <dens>:2.37E-20  <MolWgt>6.53E-01
      Mean Jeans  l(cm)3.63E+19  M(sun)2.97E+05  smallest:     len(cm):3.63E+19  M(sun):2.97E+05  a_ox tran:  0.00
  Rion:1.000E+17  Dist:0.00E+00  Diam:0.000E+00
- Hatom level 70  HatomType: add  HInducImp  F  He tot level: 63  He2 level:   70  ExecTime    10.7
+ Hatom level 70  HatomType: add  HInducImp  F  He tot level: 63  He2 level:   70  ExecTime    10.2
  ConvrgError(%)  <eden>  0.002  MaxEden  0.002  <H-C>   0.00  Max(H-C)    0.00  <Press>   0.000  MaxPrs er  0.000
   Continuity(%)  chng Te   0.0  elec den   0.0  n(H2)    0.0  n(CO)        0.0
 
@@ -983,5 +983,5 @@ Warning: duplicate reaction H-,Li+=>H,Li -- using new version
          1 mean step length searches/chemistry step
 ----------------------------------------------------
 
- Cloudy ends: 1 zone, 1 iteration, 4 cautions. (single thread) ExecTime(s) 10.75
+ Cloudy ends: 1 zone, 1 iteration, 4 cautions. (single thread) ExecTime(s) 10.21
  [Stop in cdMain at maincl.cpp:516, Cloudy exited OK]

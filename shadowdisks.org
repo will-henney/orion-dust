@@ -5,7 +5,7 @@ Not just for disks anymore.  Anything to do with dust scattering and extinction 
 ** Comparison with giant silhouette
 
 *** Loophole in the Miotello paper
-+ Nebular background has a gradient across the disk, but tey didn't take account of this
++ Nebular background has a gradient across the disk, but they didn't take account of this
 + This casts doubt on their measurements for the translucent portions
 
 #+BEGIN_SRC python :results file
@@ -428,7 +428,10 @@ There are several areas of reflection nebulosity:
 + The gray globules to the far W
 * The dark tadpole 4572-337
 :LOGBOOK:
-CLOCK: [2013-09-13 Fri 10:23]
+CLOCK: [2013-09-13 Fri 10:23]--[2013-09-18 Wed 23:39] => 133:16
+:END:
+:PROPERTIES:
+:EXPORT_FILE_NAME: DarkTadpole/ghost-globule
 :END:
 [[file:DarkTadpole/]]
 + Looks like a giant proplyd
@@ -660,6 +663,7 @@ These are the only ones in the right direction:
     + D = 2000 arcsec = 1.32e19 cm (4.27 pc)
     + => required ionizing luminosity: 2.2e49 phot/s
     + I think this is more than a O9III star could provide
+    + *No it is not!* 2e49 is spot on
   + For FUV photons, required flux is 3.71e9
     + => FUV photon luminosity of 8e48
     + Could be larger if real distance is larger than projected distance.
@@ -667,14 +671,47 @@ These are the only ones in the right direction:
 + From Hohle et al (2010) 2010AN....331..349H
 + Surface gravity is calculated as g = G M / R^{2} = G M 4 \pi \sigma T^{4} / L
 + Luminosity and mass for \iota Ori B are my guesses
-| name        |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}      | log g         |
-|-------------+-------+--------+-------+---------------+-----------------+---------------|
-| \iota Ori   | 26241 | O9 III | 32000 |        5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
-| \iota Ori B |       | B1V    | 24000 |         37000 | 15              | 3.52          |
-| HR 1886     | 26197 | B1 V   | 25400 |         37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
-| HR 1887     | 26199 | B0.5 V | 27700 |         37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
+| name    |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}          | log g         |
+|---------+-------+--------+-------+-----------+-----------------+---------------|
+| \iota Ori   | 26241 | O9 III | 32000 |    5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
+| \iota Ori B |       | B1V    | 24000 |     37000 | 15              | 3.52          |
+| HR 1886 | 26197 | B1 V   | 25400 |     37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
+| HR 1887 | 26199 | B0.5 V | 27700 |     37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
 #+TBLFM: $7=log10($Grav $6 $Msun 4 $pi $sigma $4**4 / $5 $Lsun) ; f2
 
+*** Another table of stellar parameters for the \iota Ori binary
+
+From \cite{Stickland:1987a}
++ They find E(B - V) \approx 0.03 => A_{V} \approx 0.1 mag
++ And use a distance modulus of \mu = 8.52 +/- 0.17
+  + Corresponding to distance of 10**(0.2 (8.52 +/- 0.17) + 1) = 506 +/- 40 pc
+  + So if the distance were really 400 +/- 100 pc, we would have \mu = 8.01 +/- 0.54
+  + Or, using (436 +/- 20) - (4 +/- 4) = 432 +/- 20.4
+    + Coming from the O'Dell & Henney (2008) recommendation together with assuming that \Delta z \sim \Delta r for the \iota--\theta^{1} distance
+    + which implies that \mu = 8.18 +/- 0.10, which gives a correction of 0.34 +/- 0.10 to the absolute magnitudes
+  + This would reduce the bolometric luminosities a tad wrt to the Stickland values, which is included in the following table: 
++ Relationship between absolute magnitude and luminosity:
+  + log_{10} L/L_{\odot}  = -0.4 (M_{bol} - M_{bol,\odot}),
+  + where M_{bol,\odot} = (+4.862 +/- 0.02) + (-0.107+-0.02) = 4.735 +/- 0.02
+    + Pecaut & Mamajek (2013)
+    + [[https://sites.google.com/site/mamajeksstarnotes/basic-astronomical-data-for-the-sun][mamajeksstarnotes/basic-astronomical-data-for-the-sun]]
+  + Alternatively, IAU Commissions 25 and 36 simply define a zero point for the absolute magnitude scale of L_{0} = 3.055e28 W = 3.055e35 erg/s = 79.974 L_{\odot}
+    + This means that L = L_{0} 10^{-0.4 M}
++ Calculation of Radii:
+  + 4 \pi R^{2} \sigma T^{4} = L => =$R = sqrt( $L / 4 $pi $sigma $T**4)=
+  + We include a 5% uncertanty in T_{eff} measurement
++ Masses are from binary orbit solution of Strickland
++ Gravity is then just G M / R^{2}
+
+| name    | Sp T   |  Teff | M_{bol}          | log L_{bol} / L_{\odot}   | R / R_{\odot}         | M / M_{\odot}       | log g         |
+|---------+--------+-------+---------------+-----------------+----------------+--------------+---------------|
+| \iota Ori   | O9 III | 32000 | -8.36 +/- 0.1 | 5.247 +/- 0.040 | 13.65 +/- 1.50 | 38.9 +/- 9.7 | 3.76 +/- 0.14 |
+| \iota Ori B | B1 III | 21000 | -5.46 +/- 0.1 | 4.087 +/- 0.040 | 8.34 +/- 0.92  | 18.9 +/- 4.7 | 3.87 +/- 0.14 |
+#+TBLFM: $5=log10(79.974) -0.4 $4 ; f3::$6=sqrt( 10**$5 $Lsun / 4 $pi $sigma $3**4 (1 +/- 0.05)**4) / $Rsun ; f2::$8=log10($Grav $7 $Msun / $6**2 $Rsun**2); f2::@2$4=-8.7 + 0.34 +/- 0.10::@3$4=-5.8  + 0.34 +/- 0.10
+
++ So the luminosity is significantly lower than before, by a factor of 3
++ I have saved the original versions in =stars/old/=
++ The new version has QH = 3.4e48, which is 5 times lower than before, unfortunately. 
 
 *** Cloudy models of the stellar spectra
 :PROPERTIES:
@@ -706,8 +743,8 @@ stars = dict(
 **** NGC 1980 stars
 #+begin_src python
 stars.update(
-    iota = dict(T=32000., g=3.21, L=5.72),
-    iotaB = dict(T=24000., g=3.52, L=4.57),
+    iota = dict(T=32000., g=3.76, L=5.25),
+    iotaB = dict(T=21000., g=3.87, L=4.09),
     HR1886 = dict(T=25400., g=3.62, L=4.57),
     HR1887 = dict(T=27700., g=3.78, L=4.58),
 )
@@ -861,6 +898,13 @@ make -j 6
   + L unknown - but will be 30% of primary if they have the same radius
 
 
+*** Stromgren sphere around \iota Ori
++ QH = 2e49
++ R > 4 pc
++ Q_{H} = 4/3 pi R^{3} n^{2} \alpha
++ => n = sqrt( Q_{H} / 4/3 pi R^{3} \alpha) = 100 R_{4}^{-3/2} pcc
+
+
 ** Vizier acknowledgments
 This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in A&AS 143, 23
 * COMMENT Export options
@@ -877,6 +921,7 @@ This research has made use of the VizieR catalogue access tool, CDS, Strasbourg,
 #+KEYWORDS:
 #+LANGUAGE: en
 #+SELECT_TAGS: export
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="wjh-org.css" />
 
 # Local Variables:
 # org-src-preserve-indentation: t

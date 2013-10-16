@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>The dark tadpole 4572-337</title>
+<!-- 2013-10-16 Wed 10:25 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="William Henney" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="wjh-org.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The dark tadpole 4572-337</h1>
+<p>
+<a href="DarkTadpole/">DarkTadpole/</a>
+</p>
+<ul class="org-ul">
+<li>Looks like a giant proplyd
+</li>
+<li>But seen in absorption
+</li>
+<li>And with a shocked shell too
+</li>
+<li>Position is <code>5:34:57.199 -5:23:37.49</code>
+<ul class="org-ul">
+<li>According to Robberto images
+</li>
+<li>So OW name should be 4572-337
+</li>
+</ul>
+</li>
+<li><span class="timestamp-wrapper"><span class="timestamp">[2013-09-16 Mon]</span></span> New name: Ghost Globule
+</li>
+</ul>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Limits on possible emission</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Looking at cuts across the head, it is possible that there is some Ha emission, but it must be at a very low level.
+<ul class="org-ul">
+<li>Less than 0.05 in the Bally images
+</li>
+<li>BG is 2.7 ish
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Depth of absorption</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>BG level (samples near head): 2.74 +/- 0.03, 2.73 +/- 0.03
+<ul class="org-ul">
+<li>vmeane([2.74 +/- 0.03, 2.73 +/- 0.03]) = 2.735 +/- 0.02
+</li>
+</ul>
+</li>
+<li>Core: 2.35
+</li>
+<li>Head: 2.52 +/- 0.03
+</li>
+<li>Tail filaments:
+<ul class="org-ul">
+<li>I: 2.64 +/ 0.02
+<ul class="org-ul">
+<li>BG = vmeane([2.74 +/- 0.03, 2.80 +/- 0.02]) = 2.78 +/- 0.02
+</li>
+</ul>
+</li>
+<li>II: 2.84 +/- 0.03
+<ul class="org-ul">
+<li>BG = vmeane([2.99 +/- 0.01, 2.92 +/- 0.02]) = 2.98 +/- 0.01
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Shell: BG measured inside and out
+<ul class="org-ul">
+<li>I (on axis): 2.69 +/- 0.02,
+<ul class="org-ul">
+<li>BG =  vmeane([2.75 +/- 0.02, 2.72 +/- 0.01]) = 2.726 +/- 0.01
+</li>
+</ul>
+</li>
+<li>II (to W): 2.69 +/- 0.01,
+<ul class="org-ul">
+<li>BG = vmeane([2.71 +/- 0.02, 2.72 +/- 0.02]) = 2.715 +/- 0.01
+</li>
+</ul>
+</li>
+<li>III (further to W): 2.64 +/- 0.02,
+<ul class="org-ul">
+<li>BG = vmeane([2.68 +/- 0.02, 2.67 +/- 0.02]) = 2.675 +/- 0.01
+</li>
+</ul>
+</li>
+<li>IV (to E): 2.74 +/- 0.02,
+<ul class="org-ul">
+<li>BG = vmeane([2.77 +/- 0.02, 2.76 +/- 0.02]) = 2.765 +/- 0.01
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Calculating the extinction</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>We can calculate a lower limit on the extinction by assuming that all the BG emission comes from behind the tadpole, so that A<sub>&lambda;</sub> = -2.5 log<sub>10</sub> (B/BG)
+<ul class="org-ul">
+<li>This gives a value of A<sub>H&alpha; </sub>= 0.165 for the core, 0.09 for the head and 0.01 for the shell
+</li>
+</ul>
+</li>
+<li>Alternatively, we can find an upper limit by assuming that the core extinction is actually large (say 3), implying that 2.33/2.735 = 85% of the BG emission must come from in front of the tadpole.
+<ul class="org-ul">
+<li>This gives A<sub>H&alpha; </sub>= &infin; for the core, 0.9 for the head, and 0.1 for the shell
+</li>
+</ul>
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Region</th>
+<th scope="col" class="left">Bright</th>
+<th scope="col" class="left">mean BG</th>
+<th scope="col" class="left">-2.5 log(B/BG)</th>
+<th scope="col" class="left">-2.5 log(B'/BG')</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Core</td>
+<td class="left">2.35</td>
+<td class="left">2.735 +/- 0.02</td>
+<td class="left">0.165 +/- 0.008</td>
+<td class="left">3.266 +/- 0.054</td>
+</tr>
+
+<tr>
+<td class="left">Head</td>
+<td class="left">2.52 +/- 0.03</td>
+<td class="left">2.735 +/- 0.02</td>
+<td class="left">0.089 +/- 0.015</td>
+<td class="left">0.822 +/- 0.180</td>
+</tr>
+
+<tr>
+<td class="left">Tail I</td>
+<td class="left">2.64 +/- 0.02</td>
+<td class="left">2.78 +/- 0.02</td>
+<td class="left">0.056 +/- 0.011</td>
+<td class="left">0.405 +/- 0.085</td>
+</tr>
+
+<tr>
+<td class="left">Tail II</td>
+<td class="left">2.84 +/- 0.03</td>
+<td class="left">2.98 +/- 0.01</td>
+<td class="left">0.052 +/- 0.012</td>
+<td class="left">0.263 +/- 0.066</td>
+</tr>
+
+<tr>
+<td class="left">Shell I</td>
+<td class="left">2.69 +/- 0.02</td>
+<td class="left">2.726 +/- 0.01</td>
+<td class="left">0.014 +/- 0.009</td>
+<td class="left">0.103 +/- 0.066</td>
+</tr>
+
+<tr>
+<td class="left">Shell II</td>
+<td class="left">2.69 +/- 0.01</td>
+<td class="left">2.715 +/- 0.01</td>
+<td class="left">0.010 +/- 0.006</td>
+<td class="left">0.073 +/- 0.041</td>
+</tr>
+
+<tr>
+<td class="left">Shell III</td>
+<td class="left">2.64 +/- 0.02</td>
+<td class="left">2.675 +/- 0.01</td>
+<td class="left">0.014 +/- 0.009</td>
+<td class="left">0.116 +/- 0.077</td>
+</tr>
+
+<tr>
+<td class="left">Shell IV</td>
+<td class="left">2.74 +/- 0.02</td>
+<td class="left">2.765 +/- 0.01</td>
+<td class="left">0.010 +/- 0.009</td>
+<td class="left">0.064 +/- 0.059</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Sizes</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Head radius:
+<ul class="org-ul">
+<li>axis: 1.7 arcsec
+</li>
+<li>side (east): 1.9 arcsec
+</li>
+<li>side (west): 1.7 arcsec
+</li>
+</ul>
+</li>
+<li>Head thickness
+<ul class="org-ul">
+<li>0.36 arcsec
+</li>
+</ul>
+</li>
+<li>Core size (diameter):
+<ul class="org-ul">
+<li>major axis (PA 50): 0.25 arcsec
+</li>
+<li>minor axis: 0.12 arcsec
+</li>
+</ul>
+</li>
+<li>Shell radius:
+<ul class="org-ul">
+<li>axis: 6.9 arcsec
+</li>
+<li>side (east): 5.3 arcsec
+</li>
+<li>side (west): 5.9 arcsec
+</li>
+</ul>
+</li>
+<li>Shell thickness:
+<ul class="org-ul">
+<li>axis: 0.5 arcsec
+</li>
+<li>side (west): 0.8 arcsec
+</li>
+<li>side (east): 0.7 arcsec
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Density estimates</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+All assume D = 440 pc, sigma = 5e-22 cm<sup>2</sup>/H
+</p>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1">Core</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Path length ~= 0.2 440 au = 1.312e15 cm
+</li>
+<li>Minimum column
+<ul class="org-ul">
+<li>A = 0.165
+</li>
+<li>N = 3.3e20 cm<sup>-2</sup>
+</li>
+<li>n = 2.5e5  cm<sup>-3</sup>
+</li>
+</ul>
+</li>
+<li>Mass
+<ul class="org-ul">
+<li>assume area = pi (0.1 440 au)**2 = 1.36e30 cm<sup>2</sup>
+</li>
+<li>M = 1.36e30 3.3e20 mp /msun = 3.77e-7 M<sub>o</sub>
+</li>
+</ul>
+</li>
+<li>Escape velocity
+<ul class="org-ul">
+<li>V = sqrt(2 G M / R) = 0.004 km/s
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2">Head</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Path length ~= 2 (R h)  = 1.6 440 au = 1.05e16 cm
+</li>
+<li>Minimum column
+<ul class="org-ul">
+<li>A = 0.09
+</li>
+<li>N = 1.8e20 cm<sup>-2</sup>
+</li>
+<li>n = 17,000 cm<sup>-3</sup>
+</li>
+</ul>
+</li>
+<li>Maximum column
+<ul class="org-ul">
+<li>A = 0.888
+</li>
+<li>N = 1.776e21
+</li>
+<li>n = 170,000 cm<sup>-3</sup>
+</li>
+</ul>
+</li>
+<li>Mass 
+<ul class="org-ul">
+<li>assume area = pi (1.7 440 au)**2 = 3.93e32 cm<sup>2</sup>
+</li>
+<li>M = 3.93e32 1.8e20 mp / msun = 5.95e-5 M<sub>o</sub> = 20 M<sub>&oplus;</sub>
+</li>
+</ul>
+</li>
+<li>Escape velocity
+<ul class="org-ul">
+<li>V = sqrt(2 G M / R) = 0.017 km/s
+</li>
+<li>So certainly not self-gravitating
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3">Shell</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Path length ~= 2 (R h)<sup>1/2</sup> = 3.7 440 au =2.435e16 cm
+</li>
+<li>Minimum column
+<ul class="org-ul">
+<li>A = 0.012
+</li>
+<li>N = 2.4e19 cm<sup>-2</sup>
+</li>
+<li>n = 1000 cm<sup>-3</sup>
+</li>
+</ul>
+</li>
+<li>Maximum column
+<ul class="org-ul">
+<li>A = 0.1
+</li>
+<li>N = 2e20 cm<sup>-2</sup>
+</li>
+<li>n = 8000 cm<sup>-3</sup>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Required ionizing flux if it is an ionized flow from head</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1">Ionized density at head</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Ionized density should be 1/40 of neutral density, assuming T = 1000 K and D-critical
+<ul class="org-ul">
+<li>Implies n = 425 cm<sup>-3</sup>
+</li>
+<li>Although this could be modified if magnetic support were important on the neutral side
+</li>
+</ul>
+</li>
+<li>On the other hand, shell is inconsistent with this:
+<ul class="org-ul">
+<li>Shell radius is 4 times head radius =&gt; geometric dilution of 16
+</li>
+<li>Assume M = 3, means that shell density should be 16/3 = 5.3 times smaller than i-front density
+</li>
+<li>Implying n = 5300 at ionization front
+</li>
+<li>This could work if shock was still going into head
+<ul class="org-ul">
+<li>There would be a 2e5 cm<sup>-3</sup> layer behind i-front, but if it were thin enough it wouldn't show up
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2">Recombination limit</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>F = &alpha; n<sup>2</sup> h
+</li>
+<li>&alpha; = 2.6e-13 cm<sup>3</sup>/s
+</li>
+<li>n = 5300 cm<sup>-3</sup>
+</li>
+<li>h = 0.1 R = 75 AU = 1.12e15 cm
+</li>
+<li>=&gt; F = 8.18e9 cm<sup>-2</sup>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-3" class="outline-3">
+<h3 id="sec-6-3">Advection limit</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>F = u n
+</li>
+<li>u = c = 10 km/s
+</li>
+<li>=&gt; F = 5.3e9 cm<sup>-2</sup>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Required FUV flux if it is a neutral flow from head</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>The idea is that the head and core will be molecular with T = 30-50 K
+</li>
+<li>Then the gas is dissociated, lowering its density and flowing out in a neutral photoevaporation flow with T ~ 300 K
+<ul class="org-ul">
+<li>This will have lower density, but the jump may be signifcantly less than 40 since the molecular gas is likely to be magnetically dominated
+</li>
+<li>Assuming Alfven speed of V<sub>A</sub> &asymp; 1 km/s
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-7-1" class="outline-3">
+<h3 id="sec-7-1">Neutral density at the head</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Sound speed: c = sqrt(k T / m) = 1.4 km/s T<sub>300</sub><sup>1/2</sup> for neutral gas (m = 1.3 mp)
+<ul class="org-ul">
+<li>For molecular gas @ 30 K: c = 0.3 km/s
+</li>
+</ul>
+</li>
+<li>D-type transonic dissociation front will have P<sub>m</sub> = 2 P<sub>n</sub>
+</li>
+<li>Assume P<sub>m</sub> is dominated by magnetic pressure:  P<sub>m</sub> = 0.5 &rho;<sub>m</sub> V<sub>A</sub><sup>2</sup> = 2 &rho;<sub>n</sub> c<sub>n</sub><sup>2</sup>
+<ul class="org-ul">
+<li>=&gt;  &rho;<sub>n</sub> / &rho;<sub>m</sub> =  0.25 (V<sub>A</sub> / c<sub>n</sub>)<sup>2</sup> = 0.128 V<sub>1</sub><sup>2</sup> / T<sub>300</sub>
+</li>
+<li>where V<sub>1</sub> is molecular Alfven speed in units of 1 km/s
+</li>
+</ul>
+</li>
+<li>Since we have n<sub>m</sub> = 1.7e4 pcc (this is H nucleon density) this implies:
+<ul class="org-ul">
+<li>n<sub>n</sub> = 2200 V<sub>1</sub><sup>2</sup> / T<sub>300</sub> pcc
+</li>
+</ul>
+</li>
+<li>This is more or less consistent with the shell density of 1000 pcc
+<ul class="org-ul">
+<li>which implies n<sub>n</sub> = (1000 16) / M<sub>sh</sub> = 5300 M<sub>3</sub><sup>-1</sup> pcc
+</li>
+<li><code>[&#xa0;]</code> so long as neutral flow is isothermal (need to check heating timescale)
+</li>
+</ul>
+</li>
+<li>So it would work with V<sub>A,m</sub> = 1.7 km/s and T<sub>n</sub> = 300 K or similar combination
+<ul class="org-ul">
+<li>Implies &beta;<sub>m</sub> = 2 c<sup>2</sup> / V<sub>A</sub><sup>2</sup> = 0.06
+</li>
+<li><code>[&#xa0;]</code> Would this cause anisotropic compression?
+</li>
+<li>In neutral gas, B would be smaller or equal to strength in molecular gas
+<ul class="org-ul">
+<li>equal in the case of B perp to front
+</li>
+<li>so neutral V<sub>A</sub> goes down by sqrt of density jump =&gt; V<sub>A</sub> &lt; 0.95 km/s
+</li>
+<li>=&gt; &beta;<sub>n</sub> &gt; 4.3, so neutral gas is thermally dominated but not by much
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-2" class="outline-3">
+<h3 id="sec-7-2">Advection limit for dissociation</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>F = 0.5 u n / f<sub>d</sub>
+</li>
+<li>u = c = 1.4  T<sub>300</sub><sup>1/2</sup> km/s
+</li>
+<li>n = 5300 pcc
+</li>
+<li>f<sub>d</sub> &asymp; 0.1 (dissociation fraction for Solomon process)
+</li>
+<li>=&gt; F = 3.71e9 phot/cm<sup>2</sup>
+</li>
+<li>Habing Flux is 1.213e7
+</li>
+<li>So G/G<sub>0</sub> &asymp; 300
+</li>
+<li>And G/n = 0.02 - is this big or small?
+<ul class="org-ul">
+<li>Seems to be small - see next item
+</li>
+</ul>
+</li>
+<li>Main IF in Orion has
+<ul class="org-ul">
+<li>G = 2.5e13 =&gt; G/G<sub>0</sub> = 2e6
+</li>
+<li>n &lt; 1e6 certainly, so G/n &sim; 1
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-7-2-1" class="outline-4">
+<h4 id="sec-7-2-1">And what would column of neutral flow be?</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<ul class="org-ul">
+<li>Column &asymp; n<sub>0</sub> r<sub>0</sub>
+<ul class="org-ul">
+<li>Is this still true for accelerated flows?
+</li>
+</ul>
+</li>
+<li>With n<sub>0</sub> = 5300 pcc and r<sub>0</sub> = 1.12e16 cm
+</li>
+<li>=&gt; N = 5.936e19 cm, or A<sub>V</sub> = 0.03
+</li>
+<li><code>[&#xa0;]</code> Is it feasible to have the heating/dissociation front at such a low column?
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7-3" class="outline-3">
+<h3 id="sec-7-3">And what if the shell corresponded to an ionization front?</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>Or more exactly, the neutral shell behind the i-front
+</li>
+<li>Neutral density in shell: n = 1000 pcc
+</li>
+<li>Again assume D-critical transition
+<ul class="org-ul">
+<li>P<sub>n</sub> = 2 P<sub>i</sub> where this time they are both thermally dominated
+<ul class="org-ul">
+<li>P<sub>n</sub> = &rho;<sub>n</sub> c<sub>n</sub><sup>2</sup> and  P<sub>i</sub> = &rho;<sub>i</sub> c<sub>i</sub><sup>2</sup> with c<sub>n</sub> &asymp; 1.4 km/s, c<sub>i</sub> &asymp; 10 km/s
+</li>
+<li>=&gt; n<sub>i</sub> = 0.01 n<sub>n</sub> = 10 pcc - that is very low!
+</li>
+</ul>
+</li>
+<li>That would mean an advective flux of  c<sub>i</sub> n<sub>i</sub> = 1e7 /cm<sup>2</sup>/s
+</li>
+<li>Recombination flux of 0.1 R &alpha; n<sup>2</sup>
+<ul class="org-ul">
+<li>R = 7 arcsec = 4.6e16 cm
+</li>
+<li>=&gt; F = 1.2e5 /cm<sup>2</sup>/s
+</li>
+<li>which is completely negligible
+</li>
+</ul>
+</li>
+<li>This implies a low luminosity for the ionizing star
+<ul class="org-ul">
+<li>With no attenuation @1.32e19 cm: QH = 2.2e46
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-7-4" class="outline-3">
+<h3 id="sec-7-4">How can the shell-as-i-front scenario be salvaged?</h3>
+<div class="outline-text-3" id="text-7-4">
+</div><div id="outline-container-sec-7-4-1" class="outline-4">
+<h4 id="sec-7-4-1">Smaller density jump across the i-front</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<ul class="org-ul">
+<li>This would require either:
+<ol class="org-ol">
+<li>magnetic support in the neutral shell, or
+</li>
+<li>higher T in the neutral shell
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-7-4-2" class="outline-4">
+<h4 id="sec-7-4-2">Large attenuation of ionizing radiation by recombinations in HII region</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<ul class="org-ul">
+<li>Ratio of 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Illuminating star?</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+These are the only ones in the right direction:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Star</th>
+<th scope="col" class="right">HIP</th>
+<th scope="col" class="left">RA</th>
+<th scope="col" class="left">Dec</th>
+<th scope="col" class="left">Sp T</th>
+<th scope="col" class="right">&Delta;&alpha;</th>
+<th scope="col" class="right">&Delta;&delta;</th>
+<th scope="col" class="right">D</th>
+<th scope="col" class="right">PA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">Globule</td>
+<td class="right">&#xa0;</td>
+<td class="left">5@ 34' 57.199"</td>
+<td class="left">-5@ 23' 37.49"</td>
+<td class="left">&#xa0;</td>
+<td class="right">0.0</td>
+<td class="right">0.0</td>
+<td class="right">0.0</td>
+<td class="right">0e0</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">HD 36939</td>
+<td class="right">&#xa0;</td>
+<td class="left">5@ 34' 55.265"</td>
+<td class="left">-5@ 30' 23.40"</td>
+<td class="left">B9V</td>
+<td class="right">-28.9</td>
+<td class="right">-405.9</td>
+<td class="right">406.9</td>
+<td class="right">184.</td>
+</tr>
+
+<tr>
+<td class="left">HD 36917</td>
+<td class="right">&#xa0;</td>
+<td class="left">05@ 34' 46.984"</td>
+<td class="left">-05@ 34' 14.59"</td>
+<td class="left">A0V</td>
+<td class="right">-152.5</td>
+<td class="right">-637.1</td>
+<td class="right">655.1</td>
+<td class="right">193.</td>
+</tr>
+
+<tr>
+<td class="left">iota Ori</td>
+<td class="right">26241</td>
+<td class="left">05@ 35' 25.982"</td>
+<td class="left">-05@ 54' 35.64"</td>
+<td class="left">O9III</td>
+<td class="right">429.8</td>
+<td class="right">-1858.2</td>
+<td class="right">1907.3</td>
+<td class="right">167.</td>
+</tr>
+
+<tr>
+<td class="left">ADS 4182 AB</td>
+<td class="right">&#xa0;</td>
+<td class="left">05@ 35' 02.68"</td>
+<td class="left">-06@ 00' 07.2"</td>
+<td class="left">B0</td>
+<td class="right">81.9</td>
+<td class="right">-2189.7</td>
+<td class="right">2191.2</td>
+<td class="right">178.</td>
+</tr>
+
+<tr>
+<td class="left">HR 1887</td>
+<td class="right">26199</td>
+<td class="left">05@ 35' 02.68074"</td>
+<td class="left">-06@ 00' 07.3036"</td>
+<td class="left">B0.5V</td>
+<td class="right">81.9</td>
+<td class="right">-2189.8</td>
+<td class="right">2191.3</td>
+<td class="right">178.</td>
+</tr>
+
+<tr>
+<td class="left">HR 1886</td>
+<td class="right">26197</td>
+<td class="left">05@ 35' 01.00645"</td>
+<td class="left">-06@ 00' 33.3828"</td>
+<td class="left">B1v</td>
+<td class="right">56.9</td>
+<td class="right">-2215.9</td>
+<td class="right">2216.6</td>
+<td class="right">179.</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>The first two do not seem promising at all.
+<ul class="org-ul">
+<li>At least, not for ionizing photons
+<ul class="org-ul">
+<li>Required flux is about 1e10 cm<sup>-2</sup>
+</li>
+<li>So at D = 430 arcsec = 2.83e18 cm, we need QH = 4 pi D**2 F = 1e48 phot/s
+</li>
+<li>This is equivalent to a B0 star, not a B9 star
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Iota Orionis looks more promising, except for the direction
+<ul class="org-ul">
+<li>There are some B0 stars as well
+</li>
+<li>For ionizing photons, it is still too faint
+<ul class="org-ul">
+<li>D = 2000 arcsec = 1.32e19 cm (4.27 pc)
+</li>
+<li>=&gt; required ionizing luminosity: 2.2e49 phot/s
+</li>
+<li>I think this is more than a O9III star could provide
+</li>
+<li><b>No it is not!</b> 2e49 is spot on
+</li>
+</ul>
+</li>
+<li>For FUV photons, required flux is 3.71e9
+<ul class="org-ul">
+<li>=&gt; FUV photon luminosity of 8e48
+</li>
+<li>Could be larger if real distance is larger than projected distance.
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-8-1" class="outline-3">
+<h3 id="sec-8-1">Table of stellar parameters</h3>
+<div class="outline-text-3" id="text-8-1">
+<ul class="org-ul">
+<li>From Hohle et al (2010) 2010AN&#x2026;.331..349H
+</li>
+<li>Surface gravity is calculated as g = G M / R<sup>2</sup> = G M 4 &pi; &sigma; T<sup>4</sup> / L
+</li>
+<li>Luminosity and mass for &iota; Ori B are my guesses
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">name</th>
+<th scope="col" class="right">HIP</th>
+<th scope="col" class="left">Sp T</th>
+<th scope="col" class="right">Teff</th>
+<th scope="col" class="right">L<sub>bol</sub> / L<sub>o</sub></th>
+<th scope="col" class="left">M / M<sub>o</sub></th>
+<th scope="col" class="left">log g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">&iota; Ori</td>
+<td class="right">26241</td>
+<td class="left">O9 III</td>
+<td class="right">32000</td>
+<td class="right">5.29e5</td>
+<td class="left">32.74 +/- 13.89</td>
+<td class="left">3.21 +/- 0.18</td>
+</tr>
+
+<tr>
+<td class="left">&iota; Ori B</td>
+<td class="right">&#xa0;</td>
+<td class="left">B1V</td>
+<td class="right">24000</td>
+<td class="right">37000</td>
+<td class="left">15</td>
+<td class="left">3.52</td>
+</tr>
+
+<tr>
+<td class="left">HR 1886</td>
+<td class="right">26197</td>
+<td class="left">B1 V</td>
+<td class="right">25400</td>
+<td class="right">37459</td>
+<td class="left">15.00 +/- 0.45</td>
+<td class="left">3.62 +/- 0.01</td>
+</tr>
+
+<tr>
+<td class="left">HR 1887</td>
+<td class="right">26199</td>
+<td class="left">B0.5 V</td>
+<td class="right">27700</td>
+<td class="right">37663</td>
+<td class="left">15.66 +/- 0.5</td>
+<td class="left">3.78 +/- 0.01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-8-2" class="outline-3">
+<h3 id="sec-8-2">Another table of stellar parameters for the &iota; Ori binary</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+From \cite{Stickland:1987a}
+</p>
+<ul class="org-ul">
+<li>They find E(B - V) &asymp; 0.03 =&gt; A<sub>V</sub> &asymp; 0.1 mag
+</li>
+<li>And use a distance modulus of &mu; = 8.52 +/- 0.17
+<ul class="org-ul">
+<li>Corresponding to distance of 10**(0.2 (8.52 +/- 0.17) + 1) = 506 +/- 40 pc
+</li>
+<li>So if the distance were really 400 +/- 100 pc, we would have &mu; = 8.01 +/- 0.54
+</li>
+<li>Or, using (436 +/- 20) - (4 +/- 4) = 432 +/- 20.4
+<ul class="org-ul">
+<li>Coming from the O'Dell &amp; Henney (2008) recommendation together with assuming that &Delta; z &sim; &Delta; r for the &iota;--&theta;<sup>1</sup> distance
+</li>
+<li>which implies that &mu; = 8.18 +/- 0.10, which gives a correction of 0.34 +/- 0.10 to the absolute magnitudes
+</li>
+</ul>
+</li>
+<li>This would reduce the bolometric luminosities a tad wrt to the Stickland values, which is included in the following table: 
+</li>
+</ul>
+</li>
+<li>Relationship between absolute magnitude and luminosity:
+<ul class="org-ul">
+<li>log<sub>10</sub> L/L<sub>o</sub>  = -0.4 (M<sub>bol</sub> - M<sub>bol,o</sub>),
+</li>
+<li>where M<sub>bol,o</sub> = (+4.862 +/- 0.02) + (-0.107+-0.02) = 4.735 +/- 0.02
+<ul class="org-ul">
+<li>Pecaut &amp; Mamajek (2013)
+</li>
+<li><a href="https://sites.google.com/site/mamajeksstarnotes/basic-astronomical-data-for-the-sun">mamajeksstarnotes/basic-astronomical-data-for-the-sun</a>
+</li>
+</ul>
+</li>
+<li>Alternatively, IAU Commissions 25 and 36 simply define a zero point for the absolute magnitude scale of L<sub>0</sub> = 3.055e28 W = 3.055e35 erg/s = 79.974 L<sub>o</sub>
+<ul class="org-ul">
+<li>This means that L = L<sub>0</sub> 10<sup>-0.4 M</sup>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Calculation of Radii:
+<ul class="org-ul">
+<li>4 &pi; R<sup>2</sup> &sigma; T<sup>4</sup> = L <code>&gt; =$R = sqrt( $L / 4 $pi $sigma $T**4)</code>
+</li>
+<li>We include a 5% uncertanty in T<sub>eff</sub> measurement
+</li>
+</ul>
+</li>
+<li>Masses are from binary orbit solution of Strickland
+</li>
+<li>Gravity is then just G M / R<sup>2</sup>
+</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">name</th>
+<th scope="col" class="left">Sp T</th>
+<th scope="col" class="right">Teff</th>
+<th scope="col" class="left">M<sub>bol</sub></th>
+<th scope="col" class="left">log L<sub>bol</sub> / L<sub>o</sub></th>
+<th scope="col" class="left">R / R<sub>o</sub></th>
+<th scope="col" class="left">M / M<sub>o</sub></th>
+<th scope="col" class="left">log g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">&iota; Ori</td>
+<td class="left">O9 III</td>
+<td class="right">32000</td>
+<td class="left">-8.36 +/- 0.1</td>
+<td class="left">5.247 +/- 0.040</td>
+<td class="left">13.65 +/- 1.50</td>
+<td class="left">38.9 +/- 9.7</td>
+<td class="left">3.76 +/- 0.14</td>
+</tr>
+
+<tr>
+<td class="left">&iota; Ori B</td>
+<td class="left">B1 III</td>
+<td class="right">21000</td>
+<td class="left">-5.46 +/- 0.1</td>
+<td class="left">4.087 +/- 0.040</td>
+<td class="left">8.34 +/- 0.92</td>
+<td class="left">18.9 +/- 4.7</td>
+<td class="left">3.87 +/- 0.14</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>So the luminosity is significantly lower than before, by a factor of 3
+</li>
+<li>I have saved the original versions in <code>stars/old/</code>
+</li>
+<li>The new version has QH = 3.4e48, which is 5 times lower than before, unfortunately. 
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-8-3" class="outline-3">
+<h3 id="sec-8-3">Cloudy models of the stellar spectra</h3>
+<div class="outline-text-3" id="text-8-3">
+
+<p>
+This is based on what I did for the <a href="shadowdisks.html#ID-7E209EE8-5EB0-49B8-82F1-99EBE7DC3446">Orion {N I} project</a>
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #eee8aa; font-style: italic;">"""</span>
+<span style="color: #eee8aa; font-style: italic;">Generate Cloudy input files for some OB stars in Orion</span>
+<span style="color: #eee8aa; font-style: italic;">"""</span>
+</pre>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-8-3-1" class="outline-4">
+<h4 id="sec-8-3-1">Trapezium stars</h4>
+<div class="outline-text-4" id="text-8-3-1">
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #dfaf8f;">stars</span> = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   th1C = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=39000., g=4.1, L=5.31),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   th1A = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=30000., g=4.0, L=4.45),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   th1D = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=32000., g=4.2, L=4.47),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   th1B = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=18000., g=4.1, L=3.25),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   th1C2 = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=25000., g=3.86, L=4.2),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   )
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-3-2" class="outline-4">
+<h4 id="sec-8-3-2">NGC 1980 stars</h4>
+<div class="outline-text-4" id="text-8-3-2">
+<div class="org-src-container">
+
+<pre class="src src-python">stars.update(
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   iota = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=32000., g=3.76, L=5.25),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   iotaB = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=21000., g=3.87, L=4.09),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   HR1886 = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=25400., g=3.62, L=4.57),
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   HR1887 = <span style="color: #DCDCCC; font-weight: bold;">dict</span>(T=27700., g=3.78, L=4.58),
+)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-3-3" class="outline-4">
+<h4 id="sec-8-3-3">Generate the cloudy input scripts</h4>
+<div class="outline-text-4" id="text-8-3-3">
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #dfaf8f;">template</span> = <span style="color: #eee8aa; font-style: italic;">"""\</span>
+<span style="color: #eee8aa; font-style: italic;">title Spectrum of Orion star %(id)s using Tlusty</span>
+<span style="color: #eee8aa; font-style: italic;">table star tlusty OBstar 3-dim %(T)i g=%(g).2f z=-0.1</span>
+<span style="color: #eee8aa; font-style: italic;">luminosity total solar %(L).2f </span>
+<span style="color: #eee8aa; font-style: italic;">hden 4</span>
+<span style="color: #eee8aa; font-style: italic;">radius 17</span>
+<span style="color: #eee8aa; font-style: italic;">stop zone 1</span>
+<span style="color: #eee8aa; font-style: italic;">save continuum file="%(id)s.cont"</span>
+<span style="color: #eee8aa; font-style: italic;">"""</span>
+
+<span style="color: #b9d3ee;">for</span> star <span style="color: #b9d3ee;">in</span> stars:
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   stars[star].update(<span style="color: #DCDCCC; font-weight: bold;">id</span>=star)
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   <span style="color: #b9d3ee;">with</span> <span style="color: #DCDCCC; font-weight: bold;">open</span>(star + <span style="color: #eee8aa; font-style: italic;">".in"</span>, <span style="color: #eee8aa; font-style: italic;">"w"</span>) <span style="color: #b9d3ee;">as</span> f:
+<span style="color: #7f7f7f; background-color: #484848;"> </span>   <span style="color: #7f7f7f; background-color: #484848;"> </span>   f.write(template % stars[star])
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8-4" class="outline-3">
+<h3 id="sec-8-4">Download and compile the Tlusty atmosphere models</h3>
+<div class="outline-text-3" id="text-8-4">
+</div>
+
+
+<div id="outline-container-sec-8-4-1" class="outline-4">
+<h4 id="sec-8-4-1">Download models</h4>
+<div class="outline-text-4" id="text-8-4-1">
+<p>
+Download <a href="http://nova.astro.umd.edu/Tlusty2002/database/obstar_merged_3d.ascii.gz">http://nova.astro.umd.edu/Tlusty2002/database/obstar_merged_3d.ascii.gz</a> (Note that it is big - 86MB)
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8-4-2" class="outline-4">
+<h4 id="sec-8-4-2">Unpack models</h4>
+<div class="outline-text-4" id="text-8-4-2">
+<div class="org-src-container">
+
+<pre class="src src-sh">mv ~/Downloads/obstar_merged_3d.ascii .
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-4-3" class="outline-4">
+<h4 id="sec-8-4-3">Compile models</h4>
+<div class="outline-text-4" id="text-8-4-3">
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">echo</span> <span style="color: #eee8aa; font-style: italic;">"compile stars"</span> | ../source/cloudy.exe
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-4-4" class="outline-4">
+<h4 id="sec-8-4-4">Check models are there</h4>
+<div class="outline-text-4" id="text-8-4-4">
+<div class="org-src-container">
+
+<pre class="src src-sh"><span style="color: #DCDCCC; font-weight: bold;">echo</span> <span style="color: #eee8aa; font-style: italic;">"table star available"</span> | ../source/cloudy.exe
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-5" class="outline-3">
+<h3 id="sec-8-5">Makefile to run the cloudy jobs</h3>
+<div class="outline-text-3" id="text-8-5">
+<div class="org-src-container">
+
+<pre class="src src-makefile"><span style="color: #dfaf8f;">CLOUDY</span>=cloudy.exe
+<span style="color: #dfaf8f;">SRC</span> = $(<span style="color: #dfaf8f;">wildcard</span> *.in)
+<span style="color: #dfaf8f;">OBJ</span> = $(<span style="color: #dfaf8f;">SRC</span>:<span style="color: #dfaf8f;">.in</span>=.out)
+
+<span style="color: #cccccc;">all</span>: $(<span style="color: #dfaf8f;">OBJ</span>)
+
+<span style="color: #cccccc;">%.out</span>: %.in
+        $(<span style="color: #dfaf8f;">CLOUDY</span>) &lt; $<span style="color: #cFfBcF;">&lt;</span> &gt; <span style="color: #cccccc;">$</span><span style="color: #cccccc;">@</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8-6" class="outline-3">
+<h3 id="sec-8-6">Regenerate input files and run make</h3>
+<div class="outline-text-3" id="text-8-6">
+
+<div class="org-src-container">
+
+<pre class="src src-sh">python ./generate-orion-seds.py
+<span style="color: #DCDCCC; font-weight: bold;">export</span> <span style="color: #dfaf8f;">PATH</span>=$<span style="color: #dfaf8f;">PATH</span>:~/Work/CLOUDY/git-svn/source
+make -j 6
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-8-7" class="outline-3">
+<h3 id="sec-8-7">Original copy of Iota Ori parameters</h3>
+<div class="outline-text-3" id="text-8-7">
+<ul class="org-ul">
+<li>HIP         26241                 Hipparcos identification number
+</li>
+<li>Magnitudes
+<ul class="org-ul">
+<li>B = 2.53
+</li>
+<li>V = 2.77
+</li>
+<li>J = 3.490 +/- 0.304
+</li>
+<li>H = 3.648 +/- 0.252
+</li>
+<li>K = 3.752 +/- 0.252
+</li>
+</ul>
+</li>
+<li>plx = 1.40 +/- 0.22 mas =&gt; D = 714.285714286 +/- 112.244897959 pc
+</li>
+<li>SpType        O9 III
+</li>
+<li>Teff         32000        K
+</li>
+<li>M = 32.74 +/- 13.89 M<sub>o</sub>
+</li>
+<li>L = 5.29e5 L<sub>o</sub>
+</li>
+<li>Secondary:
+<ul class="org-ul">
+<li>B1V
+</li>
+<li>Teff 24000 K
+</li>
+<li>L unknown - but will be 30% of primary if they have the same radius
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-8-8" class="outline-3">
+<h3 id="sec-8-8">Stromgren sphere around &iota; Ori</h3>
+<div class="outline-text-3" id="text-8-8">
+<ul class="org-ul">
+<li>QH = 2e49
+</li>
+<li>R &gt; 4 pc
+</li>
+<li>Q<sub>H</sub> = 4/3 pi R<sup>3</sup> n<sup>2</sup> &alpha;
+</li>
+<li>=&gt; n = sqrt( Q<sub>H</sub> / 4/3 pi R<sup>3</sup> &alpha;) = 100 R<sub>4</sub><sup>-3/2</sup> pcc
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">Vizier acknowledgments</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France. The original description of the VizieR service was published in A&amp;AS 143, 23</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: William Henney</p>
+<p class="date">Created: 2013-10-16 Wed 10:25</p>
+<p class="creator">Emacs 24.3.1 (Org mode 8.0.7)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

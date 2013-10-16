@@ -1,6 +1,6 @@
 title Spectrum of Orion star iota using Tlusty
-table star tlusty OBstar 3-dim 32000 g=3.76 z=-0.1
-luminosity total solar 5.25 
+table star tlusty OBstar 3-dim 32000 g=3.21 z=-0.1
+luminosity total solar 5.72 
 hden 4
 radius 17
 stop zone 1
