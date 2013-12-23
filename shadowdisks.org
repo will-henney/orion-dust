@@ -303,6 +303,36 @@ This one might be better
 + 5:34:57.732 -5:23:52.72 - 577-352
 
 
+
+* TODO STIS observations of 218-354
+:LOGBOOK:
+CLOCK: [2013-12-22 Sun 12:26]--[2013-12-22 Sun 12:40] =>  0:14
+CLOCK: [2013-12-22 Sun 11:48]--[2013-12-22 Sun 12:26] =>  0:38
+CLOCK: [2013-12-19 Thu 18:20]--[2013-12-19 Thu 19:17] =>  0:57
+:END:
++ Low resolution spectra of 218-354 from [[file:~/Work/HST-STIS/McCollum9866/][McCollum GO9866]]
+  + o8t502010_sx2.fits
++ Includes
+  + H\alpha + [N II] 6563,48,84
+  + [S III] 9531 - looks like extinction is much weaker here
++ In principle we can remove the continuum pretty well
+  + Assume stellar profile is separable: F(\lambda) \cdot G(x)
+  + First subtract nebula from star profile - take slice as close as possible above and below
+    + This gives F(\lambda) by taking the center of the star trace
+  + Then find G(x) by summing over \lambda ranges where there are no strong lines
+  + Finally, we subtract F(\lambda) \cdot G(x) to get the pure nebula+disk spectrum
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits /Users/will/Work/HST-STIS/McCollum9866/o8t502010_sx2.fits
+#+END_SRC
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-sub-star.fits
+#+END_SRC
+
+#+RESULTS:
+
+
 * Comparing shadow disks with shadow globules
 
 + Studies like Miotello claim to show increasingly large grains at higher optical depth
@@ -671,12 +701,12 @@ These are the only ones in the right direction:
 + From Hohle et al (2010) 2010AN....331..349H
 + Surface gravity is calculated as g = G M / R^{2} = G M 4 \pi \sigma T^{4} / L
 + Luminosity and mass for \iota Ori B are my guesses
-| name    |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}          | log g         |
-|---------+-------+--------+-------+-----------+-----------------+---------------|
-| \iota Ori   | 26241 | O9 III | 32000 |    5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
-| \iota Ori B |       | B1V    | 24000 |     37000 | 15              | 3.52          |
-| HR 1886 | 26197 | B1 V   | 25400 |     37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
-| HR 1887 | 26199 | B0.5 V | 27700 |     37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
+| name        |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}      | log g         |
+|-------------+-------+--------+-------+---------------+-----------------+---------------|
+| \iota Ori   | 26241 | O9 III | 32000 |        5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
+| \iota Ori B |       | B1V    | 24000 |         37000 | 15              | 3.52          |
+| HR 1886     | 26197 | B1 V   | 25400 |         37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
+| HR 1887     | 26199 | B0.5 V | 27700 |         37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
 #+TBLFM: $7=log10($Grav $6 $Msun 4 $pi $sigma $4**4 / $5 $Lsun) ; f2
 
 *** Another table of stellar parameters for the \iota Ori binary
@@ -703,10 +733,10 @@ From \cite{Stickland:1987a}
 + Masses are from binary orbit solution of Strickland
 + Gravity is then just G M / R^{2}
 
-| name    | Sp T   |  Teff | M_{bol}          | log L_{bol} / L_{\odot}   | R / R_{\odot}         | M / M_{\odot}       | log g         |
-|---------+--------+-------+---------------+-----------------+----------------+--------------+---------------|
-| \iota Ori   | O9 III | 32000 | -8.36 +/- 0.1 | 5.247 +/- 0.040 | 13.65 +/- 1.50 | 38.9 +/- 9.7 | 3.76 +/- 0.14 |
-| \iota Ori B | B1 III | 21000 | -5.46 +/- 0.1 | 4.087 +/- 0.040 | 8.34 +/- 0.92  | 18.9 +/- 4.7 | 3.87 +/- 0.14 |
+| name        | Sp T   |  Teff | M_{bol}          | log L_{bol} / L_{\odot} | R / R_{\odot}     | M / M_{\odot}   | log g         |
+|-------------+--------+-------+---------------+-------------------+----------------+--------------+---------------|
+| \iota Ori   | O9 III | 32000 | -8.36 +/- 0.1 | 5.247 +/- 0.040   | 13.65 +/- 1.50 | 38.9 +/- 9.7 | 3.76 +/- 0.14 |
+| \iota Ori B | B1 III | 21000 | -5.46 +/- 0.1 | 4.087 +/- 0.040   | 8.34 +/- 0.92  | 18.9 +/- 4.7 | 3.87 +/- 0.14 |
 #+TBLFM: $5=log10(79.974) -0.4 $4 ; f3::$6=sqrt( 10**$5 $Lsun / 4 $pi $sigma $3**4 (1 +/- 0.05)**4) / $Rsun ; f2::$8=log10($Grav $7 $Msun / $6**2 $Rsun**2); f2::@2$4=-8.7 + 0.34 +/- 0.10::@3$4=-5.8  + 0.34 +/- 0.10
 
 + So the luminosity is significantly lower than before, by a factor of 3
