@@ -330,6 +330,64 @@ xpaset -p ds9 fits /Users/will/Work/HST-STIS/McCollum9866/o8t502010_sx2.fits
 xpaset -p ds9 fits $PWD/stis-218-354-sub-star.fits
 #+END_SRC
 
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-H_alpha.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-H_alpha-nc.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-H_alpha-cont.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9531-nc.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9531-cont.fits
+#+END_SRC
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9531.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9069-nc.fits
+#+END_SRC
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9069-cont.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-S_III_9069.fits
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-Ar_III_7136-nc.fits
+#+END_SRC
+
+#+BEGIN_SRC sh
+xpaset -p ds9 fits $PWD/stis-218-354-He_I_5876-nc.fits
+#+END_SRC
+
+
 #+RESULTS:
 
 
