@@ -301,10 +301,21 @@ This star looks very similar
 + But it is binary
 This one might be better
 + 5:34:57.732 -5:23:52.72 - 577-352
+* PSF blurring of an opaque disk
+** DONE Install tinytim software
+CLOSED: [2013-12-30 Mon 22:57]
+[[file:tinytim/src/tinytim-7.5/][file:~/Dropbox/OrionDust/tinytim/src/tinytim-7.5/]]
+** Use tinytim to model an opaque disk
++ use the /scene/ capabilities of =tinytim3=
+  + this takes a model image and distorts it and convolves with the PSF
+  + suitable for comparison with the =_flt.fits= files
+** Find the positions on the ACS chip of the object
++ [X] I have requested the relevant datasets
++ [ ] Download datasets
++ [ ] Find positions
 
-
-
-* TODO STIS observations of 218-354
+* DONE STIS observations of 218-354
+CLOSED: [2013-12-30 Mon 23:01]
 :LOGBOOK:
 CLOCK: [2013-12-22 Sun 12:26]--[2013-12-22 Sun 12:40] =>  0:14
 CLOCK: [2013-12-22 Sun 11:48]--[2013-12-22 Sun 12:26] =>  0:38
