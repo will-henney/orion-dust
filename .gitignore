@@ -5,3 +5,5 @@
 *.blg
 /.ropeproject/config.py
 tinytim
+/acs/
+/.ipynb_checkpoints/

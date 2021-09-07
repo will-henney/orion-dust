@@ -1,5 +1,20 @@
 Not just for disks anymore.  Anything to do with dust scattering and extinction in Orion. 
 
+* Evidence for dust distribution inside proplyds
+
+** Dust shells
++ See Fig 7c of Bally:2000a (also fig 4b)
++ The best examples are 206-447 and 197-427
+  + These show an inner disk, then a gap, then an extinction shell
+
+
+** Filaments
++ In other sources there is evidence for filaments inside the envelope of the ionization front
++ Maybe these are remnants of the cloud filaments that fed the accretion disk
++ Maybe they still have inflow?
++ The best case is probably the giant proplyd 244-440 (see MUSE data)
++ But also see 180-331 and maybe 141-301
+
 * No evidence for a translucent disk in the Orion Nebula
 + Disk 218-354
 ** Comparison with giant silhouette
@@ -497,13 +512,13 @@ return figname
     + This is what we expect for constant dust properties and no scattering
     + Some filters show multiple strands in range 0.5 to 1
     + Average values around A_{V} = 1.2
-      | Filter  | \lambda | 1/\lambda | A_{\lambda}/A_{V} |
-      |---------+---------+-----------+-------------|
-      | B       |    4350 |      2.30 |        0.76 |
-      | V       |    5550 |      1.80 |         1.0 |
-      | H\alpha |    6580 |      1.52 |         0.9 |
-      | i       |    7750 |      1.29 |         0.7 |
-      | z       |    8500 |      1.18 |        0.63 |
+      | Filter |    \lambda |  1/\lambda | A_{\lambda}/A_{V} |
+      |--------+------+------+-------|
+      | B      | 4350 | 2.30 |  0.76 |
+      | V      | 5550 | 1.80 |   1.0 |
+      | H\alpha     | 6580 | 1.52 |   0.9 |
+      | i      | 7750 | 1.29 |   0.7 |
+      | z      | 8500 | 1.18 |  0.63 |
       #+TBLFM: $3=10000/$2 ; f2
     + This extinction curve is very similar to what Miotello find for their pixel A, which is one where they say the grains are 0.6 microns
     + Except that our peak in the V-band is a bit narrower
@@ -739,16 +754,16 @@ All assume D = 440 pc, sigma = 5e-22 cm^{2}/H
 
 ** Illuminating star?
 These are the only ones in the right direction:
-| Star        |   HIP | RA                | Dec               | Sp T  | \Delta\alpha | \Delta\delta |      D |   PA |
-|-------------+-------+-------------------+-------------------+-------+--------------+--------------+--------+------|
-| Globule     |       | 5@ 34' 57.199"    | -5@ 23' 37.49"    |       |          0.0 |          0.0 |    0.0 |  0e0 |
-|-------------+-------+-------------------+-------------------+-------+--------------+--------------+--------+------|
-| HD 36939    |       | 5@ 34' 55.265"    | -5@ 30' 23.40"    | B9V   |        -28.9 |       -405.9 |  406.9 | 184. |
-| HD 36917    |       | 05@ 34' 46.984"   | -05@ 34' 14.59"   | A0V   |       -152.5 |       -637.1 |  655.1 | 193. |
-| iota Ori    | 26241 | 05@ 35' 25.982"   | -05@ 54' 35.64"   | O9III |        429.8 |      -1858.2 | 1907.3 | 167. |
-| ADS 4182 AB |       | 05@ 35' 02.68"    | -06@ 00' 07.2"    | B0    |         81.9 |      -2189.7 | 2191.2 | 178. |
-| HR 1887     | 26199 | 05@ 35' 02.68074" | -06@ 00' 07.3036" | B0.5V |         81.9 |      -2189.8 | 2191.3 | 178. |
-| HR 1886     | 26197 | 05@ 35' 01.00645" | -06@ 00' 33.3828" | B1v   |         56.9 |      -2215.9 | 2216.6 | 179. |
+| Star        |   HIP | RA                | Dec               | Sp T  |     \Delta\alpha |      \Delta\delta |      D |   PA |
+|-------------+-------+-------------------+-------------------+-------+--------+---------+--------+------|
+| Globule     |       | 5@ 34' 57.199"    | -5@ 23' 37.49"    |       |    0.0 |     0.0 |    0.0 |  0e0 |
+|-------------+-------+-------------------+-------------------+-------+--------+---------+--------+------|
+| HD 36939    |       | 5@ 34' 55.265"    | -5@ 30' 23.40"    | B9V   |  -28.9 |  -405.9 |  406.9 | 184. |
+| HD 36917    |       | 05@ 34' 46.984"   | -05@ 34' 14.59"   | A0V   | -152.5 |  -637.1 |  655.1 | 193. |
+| iota Ori    | 26241 | 05@ 35' 25.982"   | -05@ 54' 35.64"   | O9III |  429.8 | -1858.2 | 1907.3 | 167. |
+| ADS 4182 AB |       | 05@ 35' 02.68"    | -06@ 00' 07.2"    | B0    |   81.9 | -2189.7 | 2191.2 | 178. |
+| HR 1887     | 26199 | 05@ 35' 02.68074" | -06@ 00' 07.3036" | B0.5V |   81.9 | -2189.8 | 2191.3 | 178. |
+| HR 1886     | 26197 | 05@ 35' 01.00645" | -06@ 00' 33.3828" | B1v   |   56.9 | -2215.9 | 2216.6 | 179. |
 #+TBLFM: $6=3600 * 15  * 0.995572228862 * deg($3 - @I$3) ;f1::$7=3600 deg($4 - @I$4);f1::$8=sqrt($6**2 + $7**2);f1::$9=arctan2($6, $7) % 360;f0
 
 + The first two do not seem promising at all.
@@ -770,12 +785,12 @@ These are the only ones in the right direction:
 + From Hohle et al (2010) 2010AN....331..349H
 + Surface gravity is calculated as g = G M / R^{2} = G M 4 \pi \sigma T^{4} / L
 + Luminosity and mass for \iota Ori B are my guesses
-| name        |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}      | log g         |
-|-------------+-------+--------+-------+---------------+-----------------+---------------|
-| \iota Ori   | 26241 | O9 III | 32000 |        5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
-| \iota Ori B |       | B1V    | 24000 |         37000 | 15              | 3.52          |
-| HR 1886     | 26197 | B1 V   | 25400 |         37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
-| HR 1887     | 26199 | B0.5 V | 27700 |         37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
+| name    |   HIP | Sp T   |  Teff | L_{bol} / L_{\odot} | M / M_{\odot}          | log g         |
+|---------+-------+--------+-------+-----------+-----------------+---------------|
+| \iota Ori   | 26241 | O9 III | 32000 |    5.29e5 | 32.74 +/- 13.89 | 3.21 +/- 0.18 |
+| \iota Ori B |       | B1V    | 24000 |     37000 | 15              | 3.52          |
+| HR 1886 | 26197 | B1 V   | 25400 |     37459 | 15.00 +/- 0.45  | 3.62 +/- 0.01 |
+| HR 1887 | 26199 | B0.5 V | 27700 |     37663 | 15.66 +/- 0.5   | 3.78 +/- 0.01 |
 #+TBLFM: $7=log10($Grav $6 $Msun 4 $pi $sigma $4**4 / $5 $Lsun) ; f2
 
 *** Another table of stellar parameters for the \iota Ori binary
@@ -802,10 +817,10 @@ From \cite{Stickland:1987a}
 + Masses are from binary orbit solution of Strickland
 + Gravity is then just G M / R^{2}
 
-| name        | Sp T   |  Teff | M_{bol}          | log L_{bol} / L_{\odot} | R / R_{\odot}     | M / M_{\odot}   | log g         |
-|-------------+--------+-------+---------------+-------------------+----------------+--------------+---------------|
-| \iota Ori   | O9 III | 32000 | -8.36 +/- 0.1 | 5.247 +/- 0.040   | 13.65 +/- 1.50 | 38.9 +/- 9.7 | 3.76 +/- 0.14 |
-| \iota Ori B | B1 III | 21000 | -5.46 +/- 0.1 | 4.087 +/- 0.040   | 8.34 +/- 0.92  | 18.9 +/- 4.7 | 3.87 +/- 0.14 |
+| name    | Sp T   |  Teff | M_{bol}          | log L_{bol} / L_{\odot}   | R / R_{\odot}         | M / M_{\odot}       | log g         |
+|---------+--------+-------+---------------+-----------------+----------------+--------------+---------------|
+| \iota Ori   | O9 III | 32000 | -8.36 +/- 0.1 | 5.247 +/- 0.040 | 13.65 +/- 1.50 | 38.9 +/- 9.7 | 3.76 +/- 0.14 |
+| \iota Ori B | B1 III | 21000 | -5.46 +/- 0.1 | 4.087 +/- 0.040 | 8.34 +/- 0.92  | 18.9 +/- 4.7 | 3.87 +/- 0.14 |
 #+TBLFM: $5=log10(79.974) -0.4 $4 ; f3::$6=sqrt( 10**$5 $Lsun / 4 $pi $sigma $3**4 (1 +/- 0.05)**4) / $Rsun ; f2::$8=log10($Grav $7 $Msun / $6**2 $Rsun**2); f2::@2$4=-8.7 + 0.34 +/- 0.10::@3$4=-5.8  + 0.34 +/- 0.10
 
 + So the luminosity is significantly lower than before, by a factor of 3
